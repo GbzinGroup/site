@@ -44,3 +44,13 @@ package-lock.json
 # Cache
 .cache/
 .parcel-cache/
+
+# ============================================
+# SEGURANCA - ARQUIVOS COM CHAVES FIREBASE
+# ============================================
+assets/js/config.js
+assets/js/admin.js
+assets/js/checkout-admin.js
+assets/js/compra.js
+assets/js/dashboard.js
+assets/js/store.js
