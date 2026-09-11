@@ -1,0 +1,119 @@
+﻿{
+  "Organization": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gbzin Group",
+    "alternateName": "Gbzin",
+    "url": "https://gbzin.com.br",
+    "logo": "https://gbzin.com.br/assets/images/logo/logo.svg",
+    "description": "Hospedagem, desenvolvimento web, apps e soluções Discord.",
+    "foundingDate": "2024",
+    "sameAs": [
+      "https://discord.gg/seuconvite",
+      "https://github.com/gbzin-group",
+      "https://twitter.com/gbzingroup",
+      "https://instagram.com/gbzingroup",
+      "https://youtube.com/@gbzingroup",
+      "https://linkedin.com/company/gbzin-group"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "email": "contato@gbzin.com.br",
+        "contactType": "customer service",
+        "availableLanguage": ["Portuguese", "English"],
+        "areaServed": "BR"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR",
+      "addressRegion": "SP"
+    }
+  },
+
+  "WebSite": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gbzin Group",
+    "url": "https://gbzin.com.br",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://gbzin.com.br/pages/conteudo/blog/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+
+  "BreadcrumbList": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://gbzin.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://gbzin.com.br/pages/servicos/" },
+      { "@type": "ListItem", "position": 3, "name": "Hospedagem", "item": "https://gbzin.com.br/pages/servicos/hospedagem/" }
+    ]
+  },
+
+  "FAQPage": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é o Gbzin Group?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Gbzin Group é uma plataforma digital que oferece hospedagem, desenvolvimento web, aplicativos e serviços Discord."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais serviços o Gbzin Group oferece?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oferecemos hospedagem de sites, desenvolvimento web, criação de aplicativos, bots Discord e soluções digitais personalizadas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como contratar um plano?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acesse a página de Planos, escolha o ideal para você e finalize o pagamento via Pix, cartão ou boleto."
+        }
+      }
+    ]
+  },
+
+  "Service": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Hospedagem de Sites",
+    "provider": { "@type": "Organization", "name": "Gbzin Group" },
+    "areaServed": { "@type": "Country", "name": "Brasil" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Planos de Hospedagem",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Plano Básico",
+          "price": "19.00",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plano Profissional",
+          "price": "49.00",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plano Empresarial",
+          "price": "99.00",
+          "priceCurrency": "BRL"
+        }
+      ]
+    }
+  }
+}

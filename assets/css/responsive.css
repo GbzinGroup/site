@@ -1,0 +1,52 @@
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

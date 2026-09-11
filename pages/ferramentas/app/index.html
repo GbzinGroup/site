@@ -1,0 +1,675 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>App - Gbzin Group</title>
+    <meta
+      name="description"
+      content="Gbzin App - O aplicativo oficial da Gbzin Group. Editor de cÃ³digo, gerenciador de arquivos, wiki e muito mais em breve."
+    />
+    <meta
+      name="keywords"
+      content="gbzin app, aplicativo, editor de cÃ³digo, gerenciador de arquivos, wiki, desenvolvimento mobile"
+    />
+    <meta name="author" content="Gbzin Group" />
+    <meta property="og:title" content="Gbzin App - Em Breve" />
+    <meta
+      property="og:description"
+      content="O aplicativo oficial da Gbzin Group estÃ¡ chegando. Editor de cÃ³digo, wiki e muito mais."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c5ce7'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>G</text></svg>"
+    />
+    <link rel="stylesheet" href="../../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/mobile.css"
+      media="screen and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/app.css" />
+  </head>
+  <body>
+    <nav class="navbar scrolled" id="navbar">
+      <div class="navbar-container">
+        <a href="/gbzin-group/index.html" class="navbar-logo"
+          ><span class="logo-icon">G</span
+          ><span class="logo-text"
+            ><span class="logo-name">Gbzin Group</span
+            ><span class="logo-tagline">Tecnologia Digital</span></span
+          ></a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span class="hamburger-line"></span
+          ><span class="hamburger-line"></span
+          ><span class="hamburger-line"></span>
+        </button>
+        <div class="navbar-links" id="navbarLinks">
+          <div class="nav-item">
+            <a href="/index.html" class="nav-link"
+              ><i class="fas fa-home"></i><span>InÃ­cio</span></a
+            >
+          </div>
+          <div class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle">
+              <i class="fas fa-cog"></i><span>ServiÃ§os</span
+              ><i class="fas fa-chevron-down dropdown-arrow"></i>
+            </button>
+            <div class="nav-dropdown">
+              <a href="/pages/servicos/index.html" class="nav-link"
+                ><i class="fas fa-th-large"></i
+                ><span>Todos os ServiÃ§os</span></a
+              ><a href="/pages/servicos/web/index.html" class="nav-link"
+                ><i class="fas fa-code"></i><span>Desenvolvimento Web</span></a
+              ><a href="/pages/servicos/apps/index.html" class="nav-link"
+                ><i class="fas fa-mobile-alt"></i><span>Aplicativos</span></a
+              ><a href="/pages/servicos/discord/index.html" class="nav-link"
+                ><i class="fab fa-discord"></i><span>Discord</span></a
+              ><a href="/pages/servicos/bots/index.html" class="nav-link"
+                ><i class="fas fa-robot"></i><span>Bots Personalizados</span></a
+              ><a href="/pages/servicos/hospedagem/index.html" class="nav-link"
+                ><i class="fas fa-server"></i><span>Hospedagem</span></a
+              ><a href="/pages/store/index.html" class="nav-link"
+                ><i class="fas fa-shopping-cart"></i><span>Vendas</span></a
+              >
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/pages/store/index.html" class="nav-link"
+              ><i class="fas fa-shopping-cart"></i><span>Loja</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/discord/index.html" class="nav-link"
+              ><i class="fab fa-discord"></i><span>Discord</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/toshirobot/index.html" class="nav-link"
+              ><i class="fas fa-robot"></i><span>Toshiro Bot</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/app/index.html" class="nav-link active"
+              ><i class="fas fa-mobile-alt"></i><span>App</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/conteudo/wiki/index.html" class="nav-link"
+              ><i class="fas fa-book"></i><span>Wiki</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/institucional/sobre/index.html" class="nav-link"
+              ><i class="fas fa-users"></i><span>Sobre</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/suporte/contato/index.html" class="nav-link"
+              ><i class="fas fa-envelope"></i><span>Contato</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="app-hero">
+      <div class="container">
+        <i class="fas fa-mobile-alt app-hero-icon"></i>
+        <div class="section-badge">EM BREVE</div>
+        <h1>Gbzin App</h1>
+        <p>
+          O aplicativo oficial da Gbzin Group estÃ¡ sendo desenvolvido. Editor de
+          cÃ³digo, gerenciador de arquivos, wiki integrada e muito mais â€” tudo na
+          palma da sua mÃ£o.
+        </p>
+        <div class="app-hero-buttons">
+          <a href="#notify" class="btn-primary-app"
+            ><i class="fas fa-bell"></i> Receber NotificaÃ§Ã£o</a
+          ><a href="#recursos" class="btn-outline-app"
+            ><i class="fas fa-list"></i> Ver Recursos</a
+          >
+        </div>
+        <div class="app-countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-num" id="days">--</span
+            ><span class="countdown-label">Dias</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="hours">--</span
+            ><span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="minutes">--</span
+            ><span class="countdown-label">Minutos</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="seconds">--</span
+            ><span class="countdown-label">Segundos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="stats-app">
+          <div class="stat-app">
+            <div class="num">03</div>
+            <div class="label">MÃ³dulos Principais</div>
+          </div>
+          <div class="stat-app">
+            <div class="num">10+</div>
+            <div class="label">Funcionalidades</div>
+          </div>
+          <div class="stat-app">
+            <div class="num">100%</div>
+            <div class="label">Gratuito</div>
+          </div>
+          <div class="stat-app">
+            <div class="num">2026</div>
+            <div class="label">LanÃ§amento</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="recursos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Recursos</span>
+          <h2 class="section-title">
+            O que estÃ¡ <span class="gradient-text">por vir</span>
+          </h2>
+          <p class="section-description">
+            Funcionalidades que estÃ£o sendo desenvolvidas para o aplicativo
+          </p>
+        </div>
+        <div class="recursos-grid">
+          <div class="recurso-card">
+            <div class="recurso-icon"><i class="fas fa-code"></i></div>
+            <h3>Code Editor</h3>
+            <p>
+              Editor de cÃ³digo completo com suporte para HTML, CSS, JavaScript e
+              outras linguagens. Escreva, teste e execute cÃ³digo direto no app.
+            </p>
+            <span class="recurso-tag dev">Em Desenvolvimento</span>
+          </div>
+          <div class="recurso-card">
+            <div class="recurso-icon"><i class="fas fa-folder-open"></i></div>
+            <h3>File Manager</h3>
+            <p>
+              Gerencie todos os seus arquivos de projetos em um sÃ³ lugar. Crie,
+              edite, organize e compartilhe arquivos facilmente.
+            </p>
+            <span class="recurso-tag dev">Em Desenvolvimento</span>
+          </div>
+          <div class="recurso-card">
+            <div class="recurso-icon"><i class="fas fa-book"></i></div>
+            <h3>Wiki Integrada</h3>
+            <p>
+              Acesse toda a documentaÃ§Ã£o da Gbzin Group diretamente no
+              aplicativo, com busca inteligente e navegaÃ§Ã£o offline.
+            </p>
+            <span class="recurso-tag dev">Em Desenvolvimento</span>
+          </div>
+          <div class="recurso-card">
+            <div class="recurso-icon"><i class="fab fa-discord"></i></div>
+            <h3>IntegraÃ§Ã£o Discord</h3>
+            <p>
+              Conecte-se ao Discord e gerencie seus servidores, bots e
+              comunidades diretamente pelo aplicativo.
+            </p>
+            <span class="recurso-tag planejado">Planejado</span>
+          </div>
+          <div class="recurso-card">
+            <div class="recurso-icon"><i class="fas fa-cloud"></i></div>
+            <h3>SincronizaÃ§Ã£o em Nuvem</h3>
+            <p>
+              Seus projetos e arquivos sincronizados automaticamente entre todos
+              os seus dispositivos.
+            </p>
+            <span class="recurso-tag planejado">Planejado</span>
+          </div>
+          <div class="recurso-card">
+            <div class="recurso-icon"><i class="fas fa-robot"></i></div>
+            <h3>Assistente IA</h3>
+            <p>
+              Um assistente de inteligÃªncia artificial integrado para ajudar com
+              cÃ³digo, dÃºvidas e produtividade.
+            </p>
+            <span class="recurso-tag planejado">Planejado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section preview-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Preview</span>
+          <h2 class="section-title">
+            Uma prÃ©via do <span class="gradient-text">aplicativo</span>
+          </h2>
+          <p class="section-description">
+            Veja como serÃ¡ a interface do Gbzin App
+          </p>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="screen-header">
+              <div class="screen-app-icon">G</div>
+              <h4>Gbzin App</h4>
+              <p>v1.0.0 â€¢ Beta</p>
+            </div>
+            <div class="screen-feature">
+              <div class="screen-feature-icon"><i class="fas fa-code"></i></div>
+              <div class="screen-feature-text">
+                <div class="screen-feature-title">Code Editor</div>
+                <div class="screen-feature-desc">
+                  Escreva cÃ³digo em qualquer lugar
+                </div>
+              </div>
+            </div>
+            <div class="screen-feature">
+              <div class="screen-feature-icon">
+                <i class="fas fa-folder-open"></i>
+              </div>
+              <div class="screen-feature-text">
+                <div class="screen-feature-title">Meus Projetos</div>
+                <div class="screen-feature-desc">12 arquivos salvos</div>
+              </div>
+            </div>
+            <div class="screen-feature">
+              <div class="screen-feature-icon"><i class="fas fa-book"></i></div>
+              <div class="screen-feature-text">
+                <div class="screen-feature-title">Wiki</div>
+                <div class="screen-feature-desc">DocumentaÃ§Ã£o integrada</div>
+              </div>
+            </div>
+            <div class="screen-feature">
+              <div class="screen-feature-icon"><i class="fas fa-user"></i></div>
+              <div class="screen-feature-text">
+                <div class="screen-feature-title">Minha Conta</div>
+                <div class="screen-feature-desc">Perfil e configuraÃ§Ãµes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Extras</span>
+          <h2 class="section-title">
+            Mais <span class="gradient-text">funcionalidades</span>
+          </h2>
+        </div>
+        <div class="features-marquee">
+          <div class="feature-mini">
+            <i class="fas fa-moon"></i><span>Modo Escuro</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-language"></i><span>Multi-idioma</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-bell"></i><span>NotificaÃ§Ãµes</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-search"></i><span>Busca Global</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-history"></i><span>HistÃ³rico</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-shield-alt"></i><span>Biometria</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-sync"></i><span>Auto-sync</span>
+          </div>
+          <div class="feature-mini">
+            <i class="fas fa-download"></i><span>Modo Offline</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Roadmap</span>
+          <h2 class="section-title">
+            Etapas do <span class="gradient-text">desenvolvimento</span>
+          </h2>
+          <p class="section-description">Acompanhe o progresso do aplicativo</p>
+        </div>
+        <div class="roadmap">
+          <div class="roadmap-item">
+            <div class="roadmap-dot done"><i class="fas fa-check"></i></div>
+            <div class="roadmap-content">
+              <span class="roadmap-status status-done">ConcluÃ­do</span>
+              <h3>Planejamento e Design</h3>
+              <p>
+                DefiniÃ§Ã£o de escopo, wireframes, protÃ³tipos e design system do
+                aplicativo.
+              </p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot current">
+              <i class="fas fa-spinner"></i>
+            </div>
+            <div class="roadmap-content">
+              <span class="roadmap-status status-current">Em Andamento</span>
+              <h3>Desenvolvimento do Core</h3>
+              <p>
+                ConstruÃ§Ã£o da base do aplicativo, sistema de navegaÃ§Ã£o e mÃ³dulos
+                principais.
+              </p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot"><i class="fas fa-code"></i></div>
+            <div class="roadmap-content">
+              <span class="roadmap-status status-planned">Planejado</span>
+              <h3>MÃ³dulo Code Editor</h3>
+              <p>
+                ImplementaÃ§Ã£o do editor de cÃ³digo com syntax highlighting e
+                execuÃ§Ã£o.
+              </p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot"><i class="fas fa-flask"></i></div>
+            <div class="roadmap-content">
+              <span class="roadmap-status status-planned">Planejado</span>
+              <h3>Beta Fechado</h3>
+              <p>
+                Testes com um grupo seleto de usuÃ¡rios para feedback e
+                correÃ§Ãµes.
+              </p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-dot"><i class="fas fa-rocket"></i></div>
+            <div class="roadmap-content">
+              <span class="roadmap-status status-planned">Planejado</span>
+              <h3>LanÃ§amento Oficial</h3>
+              <p>
+                DisponibilizaÃ§Ã£o do aplicativo para todos os usuÃ¡rios nas lojas
+                oficiais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section notify-section" id="notify">
+      <div class="container">
+        <div class="notify-card">
+          <div class="notify-icon"><i class="fas fa-bell"></i></div>
+          <h2>Seja notificado no lanÃ§amento</h2>
+          <p>
+            Deixe seu email e receba uma notificaÃ§Ã£o assim que o Gbzin App
+            estiver disponÃ­vel.
+          </p>
+          <form class="notify-form" id="notifyForm">
+            <input
+              type="email"
+              id="notifyEmail"
+              placeholder="seu@email.com"
+              required
+            /><button type="submit">
+              <i class="fas fa-paper-plane"></i> Notificar-me
+            </button>
+          </form>
+          <p
+            id="notifyMessage"
+            style="margin-top: 16px; font-size: 0.85rem; display: none"
+          ></p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">
+            Perguntas <span class="gradient-text">frequentes</span>
+          </h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item active">
+            <div class="faq-question">
+              <span>Quando o Gbzin App serÃ¡ lanÃ§ado?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O lanÃ§amento estÃ¡ planejado para 2026. Estamos trabalhando para
+                entregar uma versÃ£o estÃ¡vel e completa o mais rÃ¡pido possÃ­vel.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>O aplicativo serÃ¡ gratuito?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! O Gbzin App serÃ¡ 100% gratuito para todos os usuÃ¡rios.
+                Alguns recursos premium podem ser adicionados no futuro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Em quais plataformas estarÃ¡ disponÃ­vel?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O aplicativo serÃ¡ lanÃ§ado inicialmente para Android e iOS, com
+                possÃ­vel versÃ£o para desktop no futuro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Vou precisar de conta para usar?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                VocÃª poderÃ¡ usar o aplicativo sem conta, mas para sincronizaÃ§Ã£o
+                em nuvem e recursos avanÃ§ados, serÃ¡ necessÃ¡rio criar uma conta.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Posso participar dos testes beta?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! Cadastre seu email no formulÃ¡rio acima e entraremos em
+                contato quando o beta fechado estiver disponÃ­vel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section cta-section">
+      <div class="container">
+        <div
+          class="cta-box"
+          style="
+            text-align: center;
+            padding: 48px 32px;
+            background: linear-gradient(
+              135deg,
+              rgba(108, 92, 231, 0.1),
+              rgba(168, 85, 247, 0.05)
+            );
+            border: 1px solid rgba(108, 92, 231, 0.25);
+            border-radius: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+          "
+        >
+          <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 12px">
+            Acompanhe o desenvolvimento
+          </h2>
+          <p
+            style="
+              color: var(--text-muted);
+              margin-bottom: 24px;
+              line-height: 1.7;
+            "
+          >
+            Fique por dentro das novidades, atualizaÃ§Ãµes e lanÃ§amentos do Gbzin
+            App.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 12px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a href="https://discord.gg/UBjxyrwVKj" class="btn-primary-app"
+              ><i class="fab fa-discord"></i> Entrar no Discord</a
+            ><a href="https://github.com/GbzinGroup" class="btn-outline-app"
+              ><i class="fab fa-github"></i> Ver no GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-name">Gbzin Group</span>
+            <p>
+              Tecnologia, desenvolvimento e soluÃ§Ãµes digitais personalizadas.
+            </p>
+            <div class="footer-social">
+              <a href="https://github.com/GbzinGroup" aria-label="GitHub"
+                ><i class="fab fa-github"></i></a
+              ><a href="https://discord.gg/UBjxyrwVKj" aria-label="Discord"
+                ><i class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>NavegaÃ§Ã£o</h3>
+            <a href="/index.html">InÃ­cio</a
+            ><a href="/pages/servicos/index.html">ServiÃ§os</a
+            ><a href="/pages/ferramentas/discord/index.html">Discord</a
+            ><a href="/pages/ferramentas/toshirobot/index.html">Toshiro Bot</a
+            ><a href="/pages/ferramentas/app/index.html">App</a
+            ><a href="/pages/conteudo/wiki/index.html">Wiki</a
+            ><a href="/pages/suporte/contato/index.html">Contato</a>
+          </div>
+          <div class="footer-column">
+            <h3>ServiÃ§os</h3>
+            <a href="/pages/servicos/web/index.html">Web</a
+            ><a href="/pages/servicos/apps/index.html">Aplicativos</a
+            ><a href="/pages/servicos/discord/index.html">Discord</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Gbzin Group. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="/assets/js/anti-adblock.js"></script>
+    <script>
+    if (window.AdBlockGuard) {
+        AdBlockGuard.configure({
+        copy: {
+            title: "Precisamos do seu apoio",
+            body: "Detectamos um bloqueador de anÃºncios ativo. Os anÃºncios mantÃªm o Gbzin Group no ar e gratuitos para todos.",
+            primary: "JÃ¡ desativei, recarregar",
+            secondary: "Como desativar?"
+        }
+        });
+        AdBlockGuard.start();
+    }
+    </script>
+
+    <script src="../../assets/js/index.js"></script>
+    <script>
+      const targetDate = new Date("2026-06-01T00:00:00").getTime();
+      function updateCountdown() {
+        const e = new Date().getTime(),
+          t = targetDate - e;
+        if (t <= 0) {
+          document.getElementById("days").textContent = "00";
+          document.getElementById("hours").textContent = "00";
+          document.getElementById("minutes").textContent = "00";
+          document.getElementById("seconds").textContent = "00";
+          return;
+        }
+        const n = Math.floor(t / (1e3 * 60 * 60 * 24)),
+          o = Math.floor((t % (1e3 * 60 * 60 * 24)) / (1e3 * 60 * 60)),
+          a = Math.floor((t % (1e3 * 60 * 60)) / (1e3 * 60)),
+          s = Math.floor((t % (1e3 * 60)) / 1e3);
+        document.getElementById("days").textContent = String(n).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("hours").textContent = String(o).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("minutes").textContent = String(a).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("seconds").textContent = String(s).padStart(
+          2,
+          "0",
+        );
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1e3);
+      document.querySelectorAll(".faq-item").forEach((e) => {
+        e.querySelector(".faq-question").addEventListener("click", () => {
+          const t = e.classList.contains("active");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((e) => e.classList.remove("active"));
+          t || e.classList.add("active");
+        });
+      });
+      document.getElementById("notifyForm")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const t = document.getElementById("notifyEmail").value.trim(),
+          n = document.getElementById("notifyMessage");
+        t &&
+          ((n.textContent =
+            "âœ“ Email cadastrado! VocÃª serÃ¡ notificado no lanÃ§amento."),
+          (n.style.color = "#10B981"),
+          (n.style.display = "block"),
+          (document.getElementById("notifyEmail").value = ""),
+          setTimeout(() => {
+            n.style.display = "none";
+          }, 5e3));
+      });
+    </script>
+  </body>
+</html>

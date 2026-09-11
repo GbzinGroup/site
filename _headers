@@ -1,0 +1,120 @@
+﻿# ============================================================
+# CACHE + SEGURANCA - gbzin.com.br
+# ============================================================
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+
+# ============================================================
+# IMAGENS - cache 1 ano (imutaveis)
+# ============================================================
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# ============================================================
+# FONTES - cache 1 ano
+# ============================================================
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+# ============================================================
+# CSS / JS - cache 1 semana (usa hash na URL quando mudar)
+# ============================================================
+/*.css
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/*.js
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/*.min.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.min.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# ============================================================
+# HTML - cache curto (5 min) para atualizar rapido
+# ============================================================
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# ============================================================
+# DADOS / CONFIG - sem cache
+# ============================================================
+/data/*
+  Cache-Control: no-store
+
+/*.json
+  Cache-Control: public, max-age=300, must-revalidate
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# ============================================================
+# FEEDS
+# ============================================================
+/feed/rss.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/rss+xml; charset=utf-8
+
+/feed/atom.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/atom+xml; charset=utf-8
+
+/feed/feed.json
+  Cache-Control: public, max-age=3600
+  Content-Type: application/feed+json; charset=utf-8
+
+# ============================================================
+# ADMIN / PRIVADO - sem cache
+# ============================================================
+/admin.html
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+/dashboard.html
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+/pages/blog/admin.html
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+# ============================================================
+# SERVICE WORKER - sem cache
+# ============================================================
+/service-worker.js
+  Cache-Control: no-store
+
+/sw.js
+  Cache-Control: no-store

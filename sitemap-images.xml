@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://gbzin.com.br/</loc>
+    <image:image>
+      <image:loc>https://gbzin.com.br/assets/images/logo/logo.svg</image:loc>
+      <image:title>Gbzin Group - Logo</image:title>
+      <image:caption>Logo oficial Gbzin Group</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gbzin.com.br/pages/institucional/portfolio/</loc>
+    <image:image>
+      <image:loc>https://gbzin.com.br/assets/images/icons/icon-512x512.svg</image:loc>
+      <image:title>Portfolio Gbzin Group</image:title>
+    </image:image>
+  </url>
+</urlset>

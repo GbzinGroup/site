@@ -1,0 +1,10 @@
+﻿/* TEAM */
+Desenvolvedor: Gbzin Group
+Contato: contato@gbzin.com.br
+Site: https://gbzin.com.br
+Localizacao: Brasil
+
+/* SITE */
+Ultima atualizacao: 2026-01-01
+Linguagem: Portugues (BR)
+Componentes: HTML5, CSS3, JavaScript

@@ -1,0 +1,148 @@
+.promo-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 99998;
+    background: linear-gradient(135deg, #16162a 0%, #1a1a3e 100%);
+    border: 1px solid #2a2a3e;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 380px;
+    width: calc(100% - 60px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    transform: translateX(-120%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.promo-notification.active {
+    transform: translateX(0);
+}
+
+.promo-notification-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.promo-notification-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: rgba(108, 92, 231, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #6c5ce7;
+    animation: promo-icon-pulse 2s infinite;
+}
+
+@keyframes promo-icon-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.promo-notification-content {
+    flex: 1;
+}
+
+.promo-notification-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6c5ce7;
+    background: rgba(108, 92, 231, 0.15);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.promo-notification-text {
+    font-size: 14px;
+    color: #e1e1e6;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.promo-notification-text strong {
+    color: #6c5ce7;
+    font-weight: 700;
+}
+
+.promo-notification-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.promo-notification-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #6c5ce7;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.promo-notification-btn:hover {
+    background: #5a4bd1;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.promo-notification-close {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    color: #a0a0b8;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.promo-notification-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e1e1e6;
+}
+
+@media (max-width: 768px) {
+    .promo-notification {
+        left: 50%;
+        transform: translateX(-50%) translateY(120%);
+        bottom: 80px;
+        width: calc(100% - 40px);
+        max-width: 400px;
+    }
+
+    .promo-notification.active {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .promo-notification-container {
+        flex-wrap: wrap;
+    }
+
+    .promo-notification-actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+}

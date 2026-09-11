@@ -1,0 +1,6 @@
+﻿name = "gbzin-group"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "."
+
+[env.production]
+vars = { ENVIRONMENT = "production" }

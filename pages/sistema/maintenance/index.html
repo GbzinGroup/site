@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estamos em manutenção programada. Voltamos em breve!">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <title>Em Manutenção | Gbzin Group</title>
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/geral.css">
+  <link rel="stylesheet" href="/assets/css/maintenance.css">
+</head>
+<body class="maintenance-page">
+
+  <!-- Fundo animado -->
+  <div class="maintenance-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Partículas flutuantes -->
+  <div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <main class="maintenance-container">
+
+    <!-- Logo -->
+    <a href="/" class="maintenance-logo" aria-label="Gbzin Group">
+      <div class="logo-icon">
+        <i class="fas fa-cube"></i>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Gbzin Group</span>
+        <span class="logo-tagline">Plataforma Digital</span>
+      </div>
+    </a>
+
+    <!-- Card principal -->
+    <div class="maintenance-card">
+
+      <!-- Ícone animado -->
+      <div class="icon-wrapper">
+        <div class="icon-ring"></div>
+        <div class="icon-ring ring-2"></div>
+        <div class="icon-main">
+          <i class="fas fa-cog"></i>
+        </div>
+      </div>
+
+      <!-- Badge -->
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        Manutenção em andamento
+      </div>
+
+      <!-- Título -->
+      <h1 class="maintenance-title">
+        Voltamos <span class="gradient-text">em breve</span>
+      </h1>
+
+      <p class="maintenance-description">
+        Estamos realizando melhorias importantes para deixar sua experiência ainda melhor.
+        Agradecemos a paciência! 💜
+      </p>
+
+      <!-- Contador regressivo -->
+      <div class="countdown" id="countdown" role="timer" aria-live="polite">
+        <div class="countdown-item">
+          <span class="countdown-value" id="days">00</span>
+          <span class="countdown-label">Dias</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="hours">00</span>
+          <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="minutes">00</span>
+          <span class="countdown-label">Minutos</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="seconds">00</span>
+          <span class="countdown-label">Segundos</span>
+        </div>
+      </div>
+
+      <!-- Barra de progresso -->
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <span>Progresso da manutenção</span>
+          <span id="progress-value">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Links úteis -->
+      <div class="maintenance-actions">
+        <a href="https://discord.gg/seuconvite" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-discord"></i>
+          <span>Entre no Discord</span>
+        </a>
+        <a href="/pages/suporte/status/" class="btn btn-secondary">
+          <i class="fas fa-signal"></i>
+          <span>Status dos Serviços</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="maintenance-footer">
+      <p>
+        &copy; <span id="year"></span> Gbzin Group · 
+        <a href="/pages/suporte/contato/">Contato</a> · 
+        <a href="/pages/suporte/status/">Status</a>
+      </p>
+    </footer>
+
+  </main>
+
+  <script src="/assets/js/maintenance.js" defer></script>
+</body>
+</html>

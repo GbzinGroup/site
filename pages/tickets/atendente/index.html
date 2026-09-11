@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Atendimento - Tickets e Chat Avançado</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/atendente.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-header">
+            <div class="logo">💬</div>
+            <h2>Chat de Atendimento</h2>
+            <p>Área restrita para administradores</p>
+        </div>
+        <div class="error-message" id="errorMessage" style="display: none; color: #ef4444; margin-bottom: 15px; text-align: center;"></div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="admin@empresa.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" required placeholder="Sua senha">
+            </div>
+            <button type="submit" class="login-btn">Entrar no Chat</button>
+        </form>
+    </div>
+
+    <!-- Área do Chat -->
+    <div class="container" id="adminContainer">
+        <button class="logout-btn" onclick="logout()">🚪 Sair</button>
+        
+        <div class="header-section">
+            <div class="header-left">
+                <h1>💬 Chat de Atendimento</h1>
+                <span class="user-info" id="userInfo"></span>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="openChangeNameModal()">✏️ Mudar Nome</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Sidebar com tickets -->
+            <div class="tickets-sidebar">
+                <div class="sidebar-header">
+                    <h2>Tickets</h2>
+                    <div class="sidebar-filters">
+                        <select id="statusFilter" onchange="filterTicketList()">
+                            <option value="todos">Todos</option>
+                            <option value="aberto">Abertos</option>
+                            <option value="andamento">Em Andamento</option>
+                            <option value="fechado">Fechados</option>
+                        </select>
+                        <select id="priorityFilter" onchange="filterTicketList()">
+                            <option value="todas">Todas</option>
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </div>
+                    <input type="text" class="search-box" id="searchBox" placeholder="Buscar tickets..." onkeyup="filterTicketList()">
+                </div>
+                <div class="tickets-list" id="ticketsList">
+                    <div style="text-align: center; padding: 20px; color: #666;">Carregando...</div>
+                </div>
+            </div>
+
+            <!-- Área do Chat -->
+            <div class="chat-container" id="chatArea">
+                <div class="no-chat-selected" id="noChatSelected">
+                    <div class="icon">💬</div>
+                    <h3>Selecione um ticket para iniciar o chat</h3>
+                    <p>Escolha um ticket na lista ao lado</p>
+                </div>
+
+                <div id="activeChat" style="display: none; flex: 1; flex-direction: column;">
+                    <div class="chat-header">
+                        <div class="chat-header-info">
+                            <div class="chat-avatar" id="chatAvatar">C</div>
+                            <div class="chat-header-details">
+                                <h3 id="chatClientName">Cliente</h3>
+                                <p id="chatTicketInfo">Ticket #000000</p>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="btn btn-warning" onclick="assumeTicket()">🤝 Assumir</button>
+                            <button class="btn btn-success" onclick="resolveTicket()">✓ Resolver</button>
+                            <button class="btn btn-danger" onclick="closeTicket()">✕ Fechar</button>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages"></div>
+
+                    <div class="chat-input-area">
+                        <input type="text" class="chat-input" id="messageInput" placeholder="Digite sua resposta..." onkeypress="handleKeyPress(event)">
+                        <button class="send-btn" onclick="sendMessage()">➤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mudar Nome -->
+    <div class="modal" id="changeNameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">✏️ Mudar Nome de Exibição</span>
+                <button class="close-modal" onclick="closeChangeNameModal()">&times;</button>
+            </div>
+            <div class="form-group">
+                <label for="displayName">Seu nome:</label>
+                <input type="text" id="displayName" placeholder="Digite seu nome" maxlength="50">
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-cancel" onclick="closeChangeNameModal()">Cancelar</button>
+                <button class="btn btn-confirm" onclick="saveDisplayName()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/assets/js/atendente.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿{
+  "name": "gbzin-group",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "lint:html": "npx htmlhint '**/*.html'",
+    "lint:css": "npx stylelint '**/*.css'",
+    "lint:js": "npx eslint '**/*.js'",
+    "audit": "npm audit",
+    "lighthouse": "npx lighthouse https://seusite.com --view"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,1 @@
+export function initServices(){document.querySelectorAll(".service-card").forEach(e=>{e.addEventListener("click",()=>{const e=e.querySelector("a");e&&(window.location.href=e.href)})})}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Gbzin Code - Separe HTML, CSS e JS</title>
+    <link rel="stylesheet" href="/assets/css/file.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><span class="logo-icon">⚡</span>
+                <h1>Gbzin <span>Code</span></h1>
+            </div>
+            <p>Separe seu HTML, CSS e JavaScript automaticamente.</p>
+            <p class="header-description">Ferramenta profissional para organizar seu código em arquivos separados e
+                prontos para produção.</p>
+        </header>
+        <main>
+            <section class="main-card">
+                <div class="card-header">
+                    <h2>Código de entrada</h2>
+                    <div class="header-actions"><label for="fileInput" class="btn"><svg width="14" height="14"
+                                viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M8 1a2 2 0 012 2v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H5a1 1 0 110-2h3V3a2 2 0 012-2z" />
+                            </svg>Enviar arquivo</label><input type="file" id="fileInput" accept=".html,.htm"
+                            hidden><button id="clearBtn" class="btn btn-danger"><svg width="14" height="14"
+                                viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                            </svg>Limpar</button></div>
+                </div><textarea id="codeInput" class="code-editor" placeholder="Cole seu código HTML completo aqui..."
+                    spellcheck="false" aria-label="Código de entrada"></textarea>
+                <div class="editor-footer"><span>HTML + CSS + JavaScript</span><span id="charCount">0 caracteres</span>
+                </div><button id="splitBtn" class="btn btn-primary btn-lg"><svg width="16" height="16"
+                        viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M13 0H6a2 2 0 00-2 2 2 2 0 00-2 2v10a2 2 0 002 2h7a2 2 0 002-2 2 2 0 002-2V2a2 2 0 00-2-2zm0 13V11a2 2 0 00-2-2H5a1 1 0 010-2h8V2a1 1 0 00-1-1H6a1 1 0 00-1 1v9.5A1.5 1.5 0 016.5 13H13zm-8.5.5A1.5 1.5 0 016 15H4a1 1 0 01-1-1V5a1 1 0 012 0v8.5z" />
+                    </svg><span class="btn-text">Separar código</span></button>
+            </section>
+            <section id="outputSection" class="output-section main-card" style="display:none;">
+                <div class="card-header">
+                    <h2>Arquivos gerados</h2>
+                </div>
+                <div class="file-tree">
+                    <div class="tree-header">Estrutura do projeto</div>
+                    <div class="file-structure">
+                        <div class="folder">projeto/</div>
+                        <div class="file-item" data-file="html" role="button" tabindex="0" aria-label="Ver index.html">
+                            <span>index.html</span><span class="file-badge">HTML</span></div>
+                        <div class="folder">css/</div>
+                        <div class="file-item file-indent" data-file="css" role="button" tabindex="0"
+                            aria-label="Ver style.css"><span>style.css</span><span class="file-badge">CSS</span></div>
+                        <div class="folder">js/</div>
+                        <div class="file-item file-indent" data-file="js" role="button" tabindex="0"
+                            aria-label="Ver script.js"><span>script.js</span><span class="file-badge">JS</span></div>
+                    </div>
+                </div>
+                <div class="output-tabs" role="tablist"><button class="tab-btn active" data-tab="html" role="tab"
+                        aria-selected="true">index.html</button><button class="tab-btn" data-tab="css" role="tab"
+                        aria-selected="false">style.css</button><button class="tab-btn" data-tab="js" role="tab"
+                        aria-selected="false">script.js</button></div>
+                <div class="code-output">
+                    <div class="code-output-header">
+                        <div class="code-file-info"><span id="fileName">index.html</span></div><button id="copyBtn"
+                            class="btn btn-sm" aria-label="Copiar código"><svg width="14" height="14"
+                                viewBox="0 0 16 16" fill="currentColor">
+                                <path
+                                    d="M4 1.5H3a2 2 0 00-2 2V14a2 2 0 002 2h10a2 2 0 002-2V3.5a2 2 0 00-2-2h-1v1h1a1 1 0 011 1V14a1 1 0 01-1 1H3a1 1 0 01-1-1V3.5a1 1 0 011-1h1v-1z" />
+                                <path
+                                    d="M9.5 1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-3a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h3zm-3-1A1.5 1.5 0 005 1.5v1A1.5 1.5 0 006.5 4h3A1.5 1.5 0 0011 2.5v-1A1.5 1.5 0 009.5 0h-3z" />
+                            </svg>Copiar</button>
+                    </div>
+                    <pre><code id="outputCode"></code></pre>
+                </div><button id="downloadZipBtn" class="btn btn-success btn-lg"><svg width="16" height="16"
+                        viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M.5 9.9a.5.5 0 01.5.5v2.5a1 1 0 001 1h12a1 1 0 001-1v-2.5a.5.5 0 011 0v2.5a2 2 0 01-2 2H2a2 2 0 01-2-2v-2.5a.5.5 0 01.5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 00.708 0l3-3a.5.5 0 00-.708-.708L8.5 10.293V1.5a.5.5 0 00-1 0v8.793L5.354 8.146a.5.5 0 10-.708.708l3 3z" />
+                    </svg>Baixar projeto .ZIP</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>© 2026 Gbzin Group - Ferramenta de Desenvolvimento</p>
+        </footer>
+    </div>
+    <script src="/assets/js/file.js"></script>
+</body>
+
+</html>

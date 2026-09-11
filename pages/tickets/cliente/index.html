@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Suporte - Acompanhamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/cliente.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🎫</div>
+            <h1>Central de Suporte</h1>
+            <p>Abra um ticket e acompanhe as respostas da nossa equipe em tempo real</p>
+        </div>
+
+        <!-- Tracker Section -->
+        <div class="tracker-section">
+            <h3>🔍 Acompanhar Ticket</h3>
+            <div class="tracker-input">
+                <input type="text" id="trackingId" placeholder="Digite o código (Ex: ABC123)" maxlength="6" autocomplete="off">
+                <button onclick="trackTicket()">Buscar</button>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Form Panel -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>🎫 Abrir Novo Ticket</h2>
+                    <p>Preencha o formulário abaixo para iniciar um atendimento</p>
+                </div>
+                
+                <form id="ticketForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo <span class="required">*</span></label>
+                        <input type="text" id="nome" required minlength="3" maxlength="100" placeholder="Digite seu nome completo" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" required maxlength="150" placeholder="Digite seu melhor email" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departamento">Departamento <span class="required">*</span></label>
+                        <select id="departamento" required>
+                            <option value="" disabled selected>Selecione o departamento...</option>
+                            <option value="suporte">💻 Suporte Técnico</option>
+                            <option value="financeiro">💰 Financeiro</option>
+                            <option value="rh">👥 Recursos Humanos</option>
+                            <option value="vendas">📊 Vendas</option>
+                            <option value="outros">📌 Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prioridade">Prioridade <span class="required">*</span></label>
+                        <select id="prioridade" required>
+                            <option value="" disabled selected>Selecione a prioridade...</option>
+                            <option value="baixa">🟢 Baixa</option>
+                            <option value="media">🟡 Média</option>
+                            <option value="alta">🔴 Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto <span class="required">*</span></label>
+                        <input type="text" id="assunto" required minlength="3" maxlength="150" placeholder="Resumo do seu problema">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao">Descrição <span class="required">*</span></label>
+                        <textarea id="descricao" required minlength="10" maxlength="5000" placeholder="Descreva detalhadamente o problema que está enfrentando..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">🚀 Criar Ticket</button>
+                </form>
+
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>Enviando ticket...</p>
+                </div>
+
+                <div id="alertMessage" class="alert"></div>
+            </div>
+
+            <!-- Chat Panel -->
+            <div class="chat-panel">
+                <!-- Chat Header (hidden initially) -->
+                <div class="chat-header" id="chatHeader">
+                    <div class="chat-avatar" id="chatAvatar">S</div>
+                    <div class="chat-header-info">
+                        <h3 id="chatTitle">Suporte Técnico</h3>
+                        <p id="chatTicketInfo">Ticket #000000</p>
+                    </div>
+                </div>
+
+                <!-- Read Only Notice -->
+                <div class="read-only-notice" id="readOnlyNotice">
+                    📋 Modo de acompanhamento - Você receberá as respostas da equipe aqui
+                </div>
+
+                <!-- No Chat State -->
+                <div class="no-chat" id="noChat">
+                    <div class="icon">💬</div>
+                    <h3>Acompanhe seu Ticket</h3>
+                    <p>Busque um ticket no topo ou crie um novo para ver as respostas</p>
+                </div>
+
+                <!-- Chat Area (hidden initially) -->
+                <div id="chatArea">
+                    <div id="statusSection">
+                        <span class="status-badge" id="statusBadge">Aberto</span>
+                    </div>
+                    <div class="chat-messages" id="chatMessages"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/cliente.js"></script>
+</body>
+</html>

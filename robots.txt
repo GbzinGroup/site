@@ -1,0 +1,66 @@
+﻿# robots.txt - gbzin.com.br
+# Ultima atualizacao: 2026-01-01
+
+User-agent: *
+Allow: /
+
+# Bloquear areas administrativas
+Disallow: /admin.html
+Disallow: /dashboard.html
+Disallow: /pages/tickets/
+Disallow: /pages/file-manager/
+Disallow: /assets/js/config.js
+Disallow: /ACLib/
+Disallow: /_private/
+Disallow: /*?sessionid=
+Disallow: /*?token=
+
+# Bots de IA (bloqueie se nao quiser treinar modelos)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Google - liberar tudo
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bots agressivos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemaps
+Sitemap: https://gbzin.com.br/sitemap.xml
+Sitemap: https://gbzin.com.br/sitemap-index.xml
+Sitemap: https://gbzin.com.br/sitemap-images.xml
+Sitemap: https://gbzin.com.br/sitemap-news.xml
+Sitemap: https://gbzin.com.br/feed/rss.xml
+Sitemap: https://gbzin.com.br/feed/atom.xml

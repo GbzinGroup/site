@@ -1,0 +1,54 @@
+﻿# ============================================================
+# REDIRECTS - Paginas antigas -> novas
+# ============================================================
+
+# Institucional
+/pages/sobre/*          /pages/institucional/sobre/:splat          301!
+/pages/equipe/*         /pages/institucional/equipe/:splat         301!
+/pages/carreiras/*      /pages/institucional/carreiras/:splat      301!
+/pages/imprensa/*       /pages/institucional/imprensa/:splat       301!
+/pages/parceiros/*      /pages/institucional/parceiros/:splat      301!
+/pages/afiliados/*      /pages/institucional/afiliados/:splat      301!
+/pages/portfolio/*      /pages/institucional/portfolio/:splat      301!
+/pages/cases/*          /pages/institucional/cases/:splat          301!
+
+# Servicos
+/pages/services/*       /pages/servicos/:splat                     301!
+
+# Conteudo
+/pages/blog/*           /pages/conteudo/blog/:splat                301!
+/pages/guias/*          /pages/conteudo/guias/:splat               301!
+/pages/glossario/*      /pages/conteudo/glossario/:splat           301!
+/pages/comparativos/*   /pages/conteudo/comparativos/:splat        301!
+/pages/faq/*            /pages/conteudo/faq/:splat                 301!
+/pages/changelog/*      /pages/conteudo/changelog/:splat           301!
+/pages/newsletter/*     /pages/conteudo/newsletter/:splat          301!
+/pages/wiki/*           /pages/conteudo/wiki/:splat                301!
+
+# Suporte
+/pages/contato/*        /pages/suporte/contato/:splat              301!
+/pages/status/*         /pages/suporte/status/:splat               301!
+/pages/docs/*           /pages/suporte/docs/:splat                 301!
+/pages/speedtest/*      /pages/suporte/speedtest/:splat            301!
+/pages/tickets/*        /pages/suporte/tickets/:splat              301!
+
+# Ferramentas
+/pages/app/*            /pages/ferramentas/app/:splat              301!
+/pages/file-manager/*   /pages/ferramentas/file-manager/:splat     301!
+/pages/toshirobot/*     /pages/ferramentas/toshirobot/:splat       301!
+/pages/discord/*        /pages/ferramentas/discord/:splat          301!
+/pages/Calculadora*     /pages/ferramentas/calculadora-descontos/  301!
+
+# Sistema
+/pages/maintenance/*    /pages/sistema/maintenance/:splat          301!
+
+# Marketing
+/pages/Indique*         /pages/marketing/indique-e-lucre/          301!
+/pages/pagina-vendas/*  /pages/marketing/pagina-vendas/:splat      301!
+
+# Legal (duplicatas da raiz)
+/pages/cookies/*        /pages/legal/cookies/:splat                301!
+/pages/lgpd/*           /pages/legal/lgpd/:splat                   301!
+/pages/privacidade/*    /pages/legal/privacidade/:splat            301!
+/pages/reembolso/*      /pages/legal/reembolso/:splat              301!
+/pages/termos/*         /pages/legal/termos-uso/:splat             301!

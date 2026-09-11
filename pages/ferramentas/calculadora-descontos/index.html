@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Calculadora de Descontos</title>
+    <link rel="stylesheet" href="/assets/css/calculator.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="calculator-header">
+          <div class="header-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path
+                d="M16 4L20 10L27 11L22 17L24 24L16 20L8 24L10 17L5 11L12 10L16 4Z"
+                fill="#6c5ce7"
+                opacity="0.8"
+              />
+              <circle
+                cx="16"
+                cy="16"
+                r="13"
+                stroke="#6c5ce7"
+                stroke-width="1.5"
+                opacity="0.3"
+              />
+            </svg>
+          </div>
+          <h1>Calculadora de Descontos</h1>
+          <p>Calcule descontos, acréscimos e valores finais</p>
+        </div>
+        <div class="calculator-body">
+          <div class="input-group">
+            <label for="originalPrice">Valor Original</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">R$</span
+              ><input
+                type="number"
+                id="originalPrice"
+                placeholder="0,00"
+                step="0.01"
+                min="0"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="discountType">Tipo de Operação</label
+            ><select id="discountType">
+              <option value="discount">Desconto (%)</option>
+              <option value="increase">Acréscimo (%)</option>
+              <option value="fixedDiscount">Desconto Fixo (R$)</option>
+              <option value="fixedIncrease">Acréscimo Fixo (R$)</option>
+            </select>
+          </div>
+          <div class="input-group" id="percentageGroup">
+            <label for="percentage">Percentual</label>
+            <div class="input-wrapper">
+              <input
+                type="number"
+                id="percentage"
+                placeholder="0"
+                step="0.01"
+                min="0"
+                max="100"
+              /><span class="input-suffix">%</span>
+            </div>
+          </div>
+          <div class="input-group" id="fixedGroup" style="display: none">
+            <label for="fixedValue">Valor</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">R$</span
+              ><input
+                type="number"
+                id="fixedValue"
+                placeholder="0,00"
+                step="0.01"
+                min="0"
+              />
+            </div>
+          </div>
+          <button class="calculate-btn" onclick="calculateDiscount()">
+            <span>Calcular</span
+            ><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M4 10H16M16 10L11 5M16 10L11 15"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="result-section" id="resultSection" style="display: none">
+            <div class="result-card">
+              <div class="result-item">
+                <span class="result-label">Valor Original</span
+                ><span class="result-value" id="resultOriginal">R$ 0,00</span>
+              </div>
+              <div class="result-divider"></div>
+              <div class="result-item highlight">
+                <span class="result-label" id="resultOperationLabel"
+                  >Desconto</span
+                ><span class="result-value" id="resultOperation">R$ 0,00</span>
+              </div>
+              <div class="result-divider"></div>
+              <div class="result-item final">
+                <span class="result-label">Valor Final</span
+                ><span class="result-value final-value" id="resultFinal"
+                  >R$ 0,00</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="calculator-footer">
+          <div class="quick-actions">
+            <button class="quick-btn" onclick="quickDiscount(10)">
+              10% OFF</button
+            ><button class="quick-btn" onclick="quickDiscount(20)">
+              20% OFF</button
+            ><button class="quick-btn" onclick="quickDiscount(30)">
+              30% OFF</button
+            ><button class="quick-btn" onclick="quickDiscount(50)">
+              50% OFF
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🛡️ Anti-AdBlock -->
+    <script src="/assets/js/anti-adblock.js"></script>
+    <script>
+    if (window.AdBlockGuard) {
+        AdBlockGuard.configure({
+        copy: {
+            title: "Precisamos do seu apoio",
+            body: "Detectamos um bloqueador de anúncios ativo. Os anúncios mantêm o Gbzin Group no ar e gratuitos para todos.",
+            primary: "Já desativei, recarregar",
+            secondary: "Como desativar?"
+        }
+        });
+        AdBlockGuard.start();
+    }
+    </script>
+
+    <script src="/assets/js/calculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+﻿/* blog.css - Estilos da pagina /pages/conteudo/blog/ */
+
+.page-blog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-blog h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-blog .hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 2rem;
+}
+
+.page-blog .hero p {
+  font-size: 1.125rem;
+  opacity: 0.8;
+}

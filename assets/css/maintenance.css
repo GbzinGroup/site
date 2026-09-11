@@ -1,0 +1,566 @@
+﻿/* ============================================================
+ * MAINTENANCE.CSS — Página de manutenção
+ * ============================================================ */
+
+.maintenance-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+/* ============ FUNDO ANIMADO ============ */
+.maintenance-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.maintenance-bg .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  animation: orb-float 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.maintenance-bg .orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #6c5ce7 0%, transparent 70%);
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.maintenance-bg .orb-2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #00b894 0%, transparent 70%);
+  bottom: -150px;
+  right: -100px;
+  animation-delay: -4s;
+}
+
+.maintenance-bg .orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #0984e3 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -8s;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -40px) scale(1.1); }
+  66% { transform: translate(-30px, 30px) scale(0.95); }
+}
+
+/* Grade sutil */
+.maintenance-bg .grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(108, 92, 231, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 92, 231, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+/* ============ PARTÍCULAS FLUTUANTES ============ */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particles span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.4;
+  box-shadow: 0 0 10px var(--accent);
+  animation: particle-float 15s linear infinite;
+}
+
+.particles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particles span:nth-child(2) { left: 20%; animation-delay: -2s; }
+.particles span:nth-child(3) { left: 35%; animation-delay: -4s; }
+.particles span:nth-child(4) { left: 45%; animation-delay: -6s; }
+.particles span:nth-child(5) { left: 55%; animation-delay: -8s; }
+.particles span:nth-child(6) { left: 65%; animation-delay: -10s; }
+.particles span:nth-child(7) { left: 75%; animation-delay: -12s; }
+.particles span:nth-child(8) { left: 82%; animation-delay: -3s; }
+.particles span:nth-child(9) { left: 90%; animation-delay: -7s; }
+.particles span:nth-child(10) { left: 5%; animation-delay: -11s; }
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) scale(1);
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* ============ CONTAINER ============ */
+.maintenance-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ============ LOGO ============ */
+.maintenance-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  animation: fadeInDown 0.6s ease both;
+}
+
+.maintenance-logo .logo-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-gradient);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.maintenance-logo:hover .logo-icon {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+.maintenance-logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.maintenance-logo .logo-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.maintenance-logo .logo-tagline {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ============ CARD PRINCIPAL ============ */
+.maintenance-card {
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.maintenance-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ============ ÍCONE ANIMADO ============ */
+.icon-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-top-color: var(--accent);
+  border-right-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+
+.icon-ring.ring-2 {
+  inset: 12px;
+  border-top-color: var(--accent-light);
+  border-right-color: transparent;
+  border-bottom-color: var(--accent-light);
+  animation: spin-reverse 2s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+.icon-main {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.2), rgba(108, 92, 231, 0.05));
+  border: 1px solid rgba(108, 92, 231, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 40px rgba(108, 92, 231, 0.3);
+}
+
+.icon-main i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  animation: spin 6s linear infinite;
+}
+
+/* ============ BADGE DE STATUS ============ */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(253, 203, 110, 0.1);
+  border: 1px solid rgba(253, 203, 110, 0.3);
+  color: var(--warning);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--warning);
+  border-radius: 50%;
+  animation: pulse-warn 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-warn {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(253, 203, 110, 0.7); }
+  50% { opacity: 0.7; transform: scale(0.85); box-shadow: 0 0 0 8px rgba(253, 203, 110, 0); }
+}
+
+/* ============ TÍTULO E DESCRIÇÃO ============ */
+.maintenance-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  animation: fadeInUp 0.6s ease 0.5s both;
+}
+
+.maintenance-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+/* ============ CONTADOR REGRESSIVO ============ */
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease 0.7s both;
+}
+
+.countdown-item {
+  background: rgba(108, 92, 231, 0.08);
+  border: 1px solid rgba(108, 92, 231, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1rem 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.countdown-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+}
+
+.countdown-item:hover::before {
+  transform: scaleX(1);
+}
+
+.countdown-value {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ============ BARRA DE PROGRESSO ============ */
+.progress-wrapper {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease 0.8s both;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+#progress-value {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(108, 92, 231, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progress-shine 2s linear infinite;
+}
+
+@keyframes progress-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ============ AÇÕES ============ */
+.maintenance-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease 0.9s both;
+}
+
+.maintenance-actions .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ============ RODAPÉ ============ */
+.maintenance-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  animation: fadeInUp 0.6s ease 1s both;
+}
+
+.maintenance-footer a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.maintenance-footer a:hover {
+  color: var(--accent);
+}
+
+/* ============ ANIMAÇÕES BASE ============ */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 640px) {
+  .maintenance-card {
+    padding: 2rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-main {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-main i {
+    font-size: 2rem;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .countdown-item {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .countdown-value {
+    font-size: 1.25rem;
+  }
+
+  .countdown-label {
+    font-size: 0.6rem;
+  }
+
+  .maintenance-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .maintenance-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============ ACESSIBILIDADE ============ */
+@media (prefers-reduced-motion: reduce) {
+  .maintenance-bg .orb,
+  .particles span,
+  .icon-ring,
+  .icon-main i,
+  .pulse-dot,
+  .progress-fill::after,
+  .maintenance-card::before {
+    animation: none !important;
+  }
+}
+
+/* ============ IMPRESSÃO ============ */
+@media print {
+  .maintenance-bg,
+  .particles,
+  .countdown,
+  .progress-wrapper,
+  .maintenance-actions {
+    display: none !important;
+  }
+}

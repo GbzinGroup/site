@@ -1,0 +1,305 @@
+        .page-header {
+            padding: 140px 0 60px;
+            background: linear-gradient(135deg, #0a0a1a 0%, #16162a 50%, #1a1a3e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(108, 92, 231, 0.15) 0%, transparent 60%);
+        }
+        .page-header .container {
+            position: relative;
+            z-index: 1;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #a0a0b8;
+        }
+        .breadcrumb a {
+            color: #a0a0b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover {
+            color: #6c5ce7;
+        }
+        .breadcrumb i {
+            font-size: 12px;
+        }
+        .page-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #e1e1e6;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .page-title .gradient-text {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-description {
+            font-size: 18px;
+            color: #a0a0b8;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .historia-section {
+            padding: 80px 0;
+        }
+        .historia-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .historia-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #e1e1e6;
+            margin-bottom: 20px;
+        }
+        .historia-content p {
+            color: #a0a0b8;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        .historia-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .historia-card {
+            background: #16162a;
+            border: 1px solid #2a2a3e;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .historia-card:hover {
+            border-color: #6c5ce7;
+            transform: translateY(-5px);
+        }
+        .historia-card i {
+            font-size: 40px;
+            color: #6c5ce7;
+            margin-bottom: 15px;
+        }
+        .historia-card h3 {
+            font-size: 20px;
+            color: #e1e1e6;
+            margin-bottom: 8px;
+        }
+        .historia-card p {
+            color: #a0a0b8;
+            font-size: 14px;
+        }
+        .valores-section {
+            padding: 80px 0;
+            background: #0a0a1a;
+        }
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .valor-card {
+            background: #16162a;
+            border: 1px solid #2a2a3e;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .valor-card:hover {
+            border-color: #6c5ce7;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+        }
+        .valor-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .valor-icon i {
+            font-size: 30px;
+            color: #6c5ce7;
+        }
+        .valor-card h3 {
+            font-size: 20px;
+            color: #e1e1e6;
+            margin-bottom: 12px;
+        }
+        .valor-card p {
+            color: #a0a0b8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .equipe-section {
+            padding: 80px 0;
+        }
+        .equipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .equipe-card {
+            background: #16162a;
+            border: 1px solid #2a2a3e;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .equipe-card:hover {
+            border-color: #6c5ce7;
+            transform: translateY(-5px);
+        }
+        .equipe-avatar {
+            width: 80px;
+            height: 80px;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 35px;
+            color: #6c5ce7;
+        }
+        .equipe-card h3 {
+            font-size: 18px;
+            color: #e1e1e6;
+            margin-bottom: 5px;
+        }
+        .equipe-card .cargo {
+            color: #6c5ce7;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .equipe-card p {
+            color: #a0a0b8;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .timeline-section {
+            padding: 80px 0;
+            background: #0a0a1a;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding-left: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #2a2a3e;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #6c5ce7;
+            border-radius: 50%;
+            border: 3px solid #16162a;
+        }
+        .timeline-date {
+            font-size: 14px;
+            color: #6c5ce7;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .timeline-content h3 {
+            font-size: 18px;
+            color: #e1e1e6;
+            margin-bottom: 8px;
+        }
+        .timeline-content p {
+            color: #a0a0b8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .cta-section {
+            padding: 80px 0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+        .cta-box h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .cta-box p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        .cta-box .btn {
+            background: white;
+            color: #6c5ce7;
+        }
+        .cta-box .btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            .historia-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .page-title {
+                font-size: 36px;
+            }
+            .page-description {
+                font-size: 16px;
+            }
+            .historia-content h2 {
+                font-size: 24px;
+            }
+            .timeline {
+                padding-left: 20px;
+            }
+            .timeline-item::before {
+                left: -24px;
+            }
+        }

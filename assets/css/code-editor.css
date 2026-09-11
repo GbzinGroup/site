@@ -1,0 +1,120 @@
+/* Fullscreen Preview */
+.preview-frame.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2999;
+    border: none;
+    border-radius: 0;
+}
+
+.fullscreen-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3001;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--danger);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.fullscreen-close:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Line numbers sync */
+.line-numbers {
+    overflow: hidden;
+    white-space: pre;
+    padding: 1rem 0.5rem;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    user-select: none;
+    text-align: right;
+    min-width: 40px;
+    max-width: 50px;
+}
+
+/* Code input improvements */
+.code-input {
+    flex: 1;
+    background: var(--bg-primary);
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    padding: 1rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: none;
+    tab-size: 4;
+    white-space: pre;
+    overflow: auto;
+    min-height: 100%;
+    width: calc(100% - 50px);
+}
+
+/* Editor status bar */
+.editor-status {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.editor-status span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Language indicator */
+.editor-language {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.editor-language i {
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .editor-status {
+        gap: 0.75rem;
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+    }
+    
+    .line-numbers {
+        min-width: 30px;
+        max-width: 40px;
+        font-size: 12px;
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .code-input {
+        font-size: 12px;
+        padding: 0.75rem;
+        width: calc(100% - 40px);
+    }
+}

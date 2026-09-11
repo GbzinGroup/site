@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Security Check</title></head>
+<body>
+<h1>Teste de headers (abra o console)</h1>
+<script>
+fetch('/').then(r => {
+  const h = ['strict-transport-security','x-frame-options','x-content-type-options','referrer-policy','content-security-policy','permissions-policy'];
+  h.forEach(k => console.log(k + ': ' + (r.headers.get(k) || 'AUSENTE')));
+});
+</script>
+</body>
+</html>

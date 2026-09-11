@@ -1,0 +1,282 @@
+:root {
+    --cp-primary: #8b5cf6;
+    --cp-primary-hover: #7c3aed;
+    --cp-secondary: #6d28d9;
+    --cp-bg: #ffffff;
+    --cp-bg-light: #faf5ff;
+    --cp-text: #1e1b4b;
+    --cp-text-muted: #6b7280;
+    --cp-border: #e9d5ff;
+    --cp-overlay: rgba(30, 27, 75, 0.75);
+    --cp-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    --cp-radius: 16px;
+    --cp-transition: 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.coupon-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cp-overlay);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+.coupon-popup-overlay.active {
+    display: flex;
+}
+
+.coupon-popup {
+    background: var(--cp-bg);
+    border-radius: var(--cp-radius);
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: var(--cp-shadow);
+}
+
+.cp-header {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.cp-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.cp-badge-text {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.cp-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+.cp-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.cp-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--cp-transition);
+}
+
+.cp-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.cp-close svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cp-content {
+    padding: 30px 24px 24px;
+    text-align: center;
+}
+
+.cp-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--cp-text);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.cp-subtitle {
+    font-size: 15px;
+    color: var(--cp-text-muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.cp-code-container {
+    margin: 20px 0;
+}
+
+.cp-code-label {
+    font-size: 11px;
+    color: var(--cp-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+}
+
+.cp-code-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cp-bg-light);
+    border: 2px dashed var(--cp-border);
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.cp-code {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cp-primary-hover);
+    letter-spacing: 1.5px;
+    font-family: 'Courier New', monospace;
+    user-select: all;
+}
+
+.cp-copy-btn {
+    background: var(--cp-primary);
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background var(--cp-transition);
+    white-space: nowrap;
+}
+
+.cp-copy-btn:hover {
+    background: var(--cp-primary-hover);
+}
+
+.cp-copy-btn.copied {
+    background: #059669;
+}
+
+.cp-message {
+    font-size: 13px;
+    color: var(--cp-text-muted);
+    margin: 16px 0;
+    line-height: 1.6;
+}
+
+.cp-cta-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform var(--cp-transition), box-shadow var(--cp-transition);
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.cp-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.cp-terms {
+    font-size: 10px;
+    color: #9ca3af;
+    margin-top: 14px;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    .coupon-popup-overlay {
+        padding: 10px;
+        align-items: flex-end;
+    }
+    
+    .coupon-popup {
+        max-width: 100%;
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .cp-header {
+        padding: 20px 16px;
+    }
+    
+    .cp-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .cp-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .cp-content {
+        padding: 20px 16px 16px;
+    }
+    
+    .cp-title {
+        font-size: 22px;
+    }
+    
+    .cp-subtitle {
+        font-size: 13px;
+    }
+    
+    .cp-code-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .cp-code {
+        font-size: 18px;
+    }
+    
+    .cp-copy-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cp-cta-btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}

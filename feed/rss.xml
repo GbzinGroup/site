@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gbzin Group - Blog</title>
+    <link>https://gbzin.com.br/</link>
+    <description>Artigos sobre tecnologia, hospedagem e desenvolvimento web.</description>
+    <language>pt-BR</language>
+    <lastBuildDate>Wed, 01 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://gbzin.com.br/feed/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Bem-vindo ao Blog Gbzin Group</title>
+      <link>https://gbzin.com.br/pages/conteudo/blog/</link>
+      <description>Nosso blog esta no ar.</description>
+      <pubDate>Wed, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://gbzin.com.br/pages/conteudo/blog/</guid>
+    </item>
+  </channel>
+</rss>

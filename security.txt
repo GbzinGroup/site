@@ -1,0 +1,6 @@
+﻿Contact: mailto:seguranca@gbzin.com.br
+Contact: https://gbzin.com.br/pages/contato/
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: pt-BR, en
+Canonical: https://gbzin.com.br/.well-known/security.txt
+Policy: https://gbzin.com.br/SECURITY.md

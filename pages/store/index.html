@@ -1,0 +1,459 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Loja - Gbzin Group</title>
+    <meta
+      name="description"
+      content="Loja do Gbzin Group - Produtos digitais, serviÃ§os e planos"
+    />
+    <meta property="og:title" content="Loja - Gbzin Group" />
+    <meta
+      property="og:description"
+      content="Produtos digitais e serviÃ§os do Gbzin Group"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c5ce7'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>G</text></svg>"
+    />
+    <link rel="stylesheet" href="../../assets/css/index.css" />
+    <link rel="stylesheet" href="../../assets/css/vendas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar" aria-label="NavegaÃ§Ã£o principal">
+      <div class="navbar-container">
+        <a
+          href="/index.html"
+          class="navbar-logo"
+          aria-label="Gbzin Group - InÃ­cio"
+          ><span class="logo-icon">G</span
+          ><span class="logo-text"
+            ><span class="logo-name">Gbzin Group</span
+            ><span class="logo-tagline">Tecnologia Digital</span></span
+          ></a
+        ><button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span
+          ><span class="hamburger-line"></span
+          ><span class="hamburger-line"></span>
+        </button>
+        <div class="navbar-links" id="navbarLinks">
+          <div class="nav-item">
+            <a href="/index.html" class="nav-link"
+              ><i class="fas fa-home"></i><span>InÃ­cio</span></a
+            >
+          </div>
+          <div class="nav-item dropdown">
+            <button
+              class="nav-link dropdown-toggle"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <i class="fas fa-cog"></i><span>ServiÃ§os</span
+              ><i class="fas fa-chevron-down dropdown-arrow"></i>
+            </button>
+            <div class="nav-dropdown">
+              <a href="/pages/servicos/index.html" class="nav-link"
+                ><i class="fas fa-th-large"></i
+                ><span>Todos os ServiÃ§os</span></a
+              ><a href="/pages/servicos/web/index.html" class="nav-link"
+                ><i class="fas fa-code"></i><span>Desenvolvimento Web</span></a
+              ><a href="/pages/servicos/apps/index.html" class="nav-link"
+                ><i class="fas fa-mobile-alt"></i><span>Aplicativos</span></a
+              ><a href="/pages/servicos/discord/index.html" class="nav-link"
+                ><i class="fab fa-discord"></i><span>Discord</span></a
+              ><a href="/pages/servicos/bots/index.html" class="nav-link"
+                ><i class="fas fa-robot"></i><span>Bots Personalizados</span></a
+              ><a href="/pages/servicos/hospedagem/index.html" class="nav-link"
+                ><i class="fas fa-server"></i><span>Hospedagem</span></a
+              ><a href="/pages/store/index.html" class="nav-link"
+                ><i class="fas fa-shopping-cart"></i><span>Vendas</span></a
+              >
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/pages/store/index.html" class="nav-link active"
+              ><i class="fas fa-shopping-cart"></i><span>Loja</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/discord/index.html" class="nav-link"
+              ><i class="fab fa-discord"></i><span>Discord</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/toshirobot/index.html" class="nav-link"
+              ><i class="fas fa-robot"></i><span>Toshiro Bot</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/app/index.html" class="nav-link"
+              ><i class="fas fa-mobile-alt"></i><span>App</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/conteudo/wiki/index.html" class="nav-link"
+              ><i class="fas fa-book"></i><span>Wiki</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/institucional/sobre/index.html" class="nav-link"
+              ><i class="fas fa-users"></i><span>Sobre</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/suporte/contato/index.html" class="nav-link"
+              ><i class="fas fa-envelope"></i><span>Contato</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="page-hero store-hero" id="storeHero">
+      <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="grid-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span><span>Loja Oficial</span>
+          </div>
+          <h1 class="hero-title">
+            Produtos <span class="gradient-text">Digitais</span>
+          </h1>
+          <p class="hero-description">
+            SoluÃ§Ãµes completas para transformar suas ideias em realidade.
+            Produtos e serviÃ§os com qualidade garantida e suporte dedicado.
+          </p>
+          <div class="hero-actions">
+            <a href="#produtos" class="btn btn-primary btn-lg"
+              ><i class="fas fa-shopping-bag"></i><span>Ver Produtos</span></a
+            ><a href="#planos" class="btn btn-secondary btn-lg"
+              ><i class="fas fa-tags"></i><span>Ver Planos</span></a
+            >
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="stat-number">+500</span
+              ><span class="stat-label">Clientes</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">+1000</span
+              ><span class="stat-label">Projetos</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">98%</span
+              ><span class="stat-label">SatisfaÃ§Ã£o</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section produtos-section" id="produtos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Produtos</span>
+          <h2 class="section-title">Nossos Produtos</h2>
+          <p class="section-description">
+            SoluÃ§Ãµes prontas para impulsionar seu negÃ³cio
+          </p>
+        </div>
+        <div class="servicos-grid produtos-grid" id="produtosGrid">
+          <div class="store-loading">
+            <i class="fas fa-spinner"></i>
+            <p>Carregando produtos...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section planos-section" id="planos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Planos</span>
+          <h2 class="section-title">Planos Mensais</h2>
+          <p class="section-description">
+            Escolha o plano ideal para seu negÃ³cio
+          </p>
+        </div>
+        <div class="servicos-grid planos-grid">
+          <div class="servico-card plano-card">
+            <h3 class="plano-nome">BÃ¡sico</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span><span class="valor">49</span
+              ><span class="periodo">/mÃªs</span>
+            </div>
+            <p class="plano-desc">Para projetos pequenos</p>
+            <ul class="plano-features">
+              <li><i class="fas fa-check"></i>1 site</li>
+              <li><i class="fas fa-check"></i>5 GB armazenamento</li>
+              <li><i class="fas fa-check"></i>Suporte por email</li>
+              <li><i class="fas fa-check"></i>SSL gratuito</li>
+              <li><i class="fas fa-check"></i>Backup semanal</li>
+            </ul>
+            <button
+              class="btn btn-secondary btn-block"
+              onclick="irParaCheckout('Plano BÃ¡sico', 49, 'plano')"
+            >
+              Assinar Plano
+            </button>
+          </div>
+          <div class="servico-card plano-card destaque">
+            <div class="plano-badge">Recomendado</div>
+            <h3 class="plano-nome">Profissional</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span><span class="valor">99</span
+              ><span class="periodo">/mÃªs</span>
+            </div>
+            <p class="plano-desc">Para empresas em crescimento</p>
+            <ul class="plano-features">
+              <li><i class="fas fa-check"></i>5 sites</li>
+              <li><i class="fas fa-check"></i>50 GB armazenamento</li>
+              <li><i class="fas fa-check"></i>Suporte prioritÃ¡rio</li>
+              <li><i class="fas fa-check"></i>SSL gratuito</li>
+              <li><i class="fas fa-check"></i>Backup diÃ¡rio</li>
+              <li><i class="fas fa-check"></i>CDN incluÃ­do</li>
+            </ul>
+            <button
+              class="btn btn-primary btn-block"
+              onclick="irParaCheckout('Plano Profissional', 99, 'plano')"
+            >
+              Assinar Plano
+            </button>
+          </div>
+          <div class="servico-card plano-card">
+            <h3 class="plano-nome">Enterprise</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span><span class="valor">299</span
+              ><span class="periodo">/mÃªs</span>
+            </div>
+            <p class="plano-desc">Para grandes empresas</p>
+            <ul class="plano-features">
+              <li><i class="fas fa-check"></i>Sites ilimitados</li>
+              <li><i class="fas fa-check"></i>Armazenamento ilimitado</li>
+              <li><i class="fas fa-check"></i>Suporte 24/7</li>
+              <li><i class="fas fa-check"></i>SSL gratuito</li>
+              <li><i class="fas fa-check"></i>Backup em tempo real</li>
+              <li><i class="fas fa-check"></i>CDN incluÃ­do</li>
+              <li><i class="fas fa-check"></i>Gerente dedicado</li>
+            </ul>
+            <button
+              class="btn btn-secondary btn-block"
+              onclick="irParaCheckout('Plano Enterprise', 299, 'plano')"
+            >
+              Assinar Plano
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section depoimentos-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Depoimentos</span>
+          <h2 class="section-title">O que dizem nossos clientes</h2>
+        </div>
+        <div class="servicos-grid">
+          <div class="servico-card depoimento-card">
+            <div class="depoimento-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="depoimento-texto">
+              "O site ficou incrÃ­vel! Atendimento rÃ¡pido e preÃ§o justo.
+              Recomendo demais!"
+            </p>
+            <div class="depoimento-autor">
+              <div class="avatar">JS</div>
+              <div><strong>JoÃ£o Silva</strong><span> Cliente</span></div>
+            </div>
+          </div>
+          <div class="servico-card depoimento-card">
+            <div class="depoimento-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="depoimento-texto">
+              "O bot Discord revolucionou minha comunidade. Suporte excelente!"
+            </p>
+            <div class="depoimento-autor">
+              <div class="avatar">MS</div>
+              <div><strong>Maria Santos</strong><span> Cliente</span></div>
+            </div>
+          </div>
+          <div class="servico-card depoimento-card">
+            <div class="depoimento-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="depoimento-texto">
+              "Aplicativo perfeito! Meus clientes adoraram a nova experiÃªncia."
+            </p>
+            <div class="depoimento-autor">
+              <div class="avatar">PO</div>
+              <div><strong>Pedro Oliveira</strong><span> Cliente</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-description">Tire suas dÃºvidas antes de comprar</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Como funciona o pagamento?</span
+              ><i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Aceitamos pagamentos via PIX, cartÃ£o de crÃ©dito e boleto
+                bancÃ¡rio. O pagamento pode ser parcelado em atÃ© 12x.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Qual o prazo de entrega?</span
+              ><i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                O prazo varia conforme o produto. Sites profissionais: 7-15
+                dias. Bots Discord: 3-7 dias. Aplicativos: 15-30 dias.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>VocÃªs oferecem garantia?</span
+              ><i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sim! Oferecemos garantia de 30 dias para todos os produtos. Se
+                nÃ£o estiver satisfeito, devolvemos seu dinheiro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Posso personalizar os produtos?</span
+              ><i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sim! Todos os produtos podem ser personalizados de acordo com
+                suas necessidades especÃ­ficas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-final" id="cta">
+      <div class="container">
+        <h2>Pronto para comeÃ§ar?</h2>
+        <p>Entre em contato e receba uma proposta personalizada</p>
+        <div class="hero-actions" style="justify-content: center">
+          <a href="/pages/suporte/contato/index.html" class="btn btn-primary btn-lg"
+            ><i class="fas fa-envelope"></i><span>Fazer OrÃ§amento</span></a
+          ><a
+            href="https://wa.me/5515996228860"
+            target="_blank"
+            class="btn btn-lg"
+            style="background: #25d366; color: white"
+            ><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-name">Gbzin Group</span>
+            <p>
+              Tecnologia, desenvolvimento e soluÃ§Ãµes digitais personalizadas.
+            </p>
+            <div class="footer-social">
+              <a href="https://github.com/GbzinGroup" aria-label="GitHub"
+                ><i class="fab fa-github"></i></a
+              ><a href="https://discord.gg/UBjxyrwVKj" aria-label="Discord"
+                ><i class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>NavegaÃ§Ã£o</h3>
+            <a href="/index.html">InÃ­cio</a
+            ><a href="/pages/servicos/index.html">ServiÃ§os</a
+            ><a href="/pages/store/index.html">Loja</a
+            ><a href="/pages/ferramentas/discord/index.html">Discord</a
+            ><a href="/pages/ferramentas/toshirobot/index.html">Toshiro Bot</a
+            ><a href="/pages/conteudo/wiki/index.html">Wiki</a
+            ><a href="/pages/suporte/contato/index.html">Contato</a>
+          </div>
+          <div class="footer-column">
+            <h3>ServiÃ§os</h3>
+            <a href="/pages/servicos/web/index.html">Web</a
+            ><a href="/pages/servicos/apps/index.html">Aplicativos</a
+            ><a href="/pages/servicos/discord/index.html">Discord</a>
+          </div>
+          <div class="footer-column">
+            <h3>Sistema</h3>
+            <a href="/pages/termos/index.html">Termos</a
+            ><a href="/pages/privacidade/index.html">Privacidade</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Gbzin Group. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="../../assets/js/index.js"></script>
+    <script src="../../assets/js/store.js"></script>
+
+<script src="/assets/js/anti-adblock.js"></script>
+<script>
+  if (window.AdBlockGuard) {
+    AdBlockGuard.configure({
+      copy: {
+        title: "Precisamos do seu apoio",
+        body: "Detectamos um bloqueador de anÃºncios ativo. Os anÃºncios mantÃªm o Gbzin Group no ar e gratuitos para todos.",
+        primary: "JÃ¡ desativei, recarregar",
+        secondary: "Como desativar?"
+      }
+    });
+    AdBlockGuard.start();
+  }
+</script>
+
+  </body>
+</html>

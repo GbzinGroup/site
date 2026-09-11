@@ -1,0 +1,6 @@
+﻿# Donos do codigo
+* @gbzin-group/admin
+
+/assets/ @gbzin-group/frontend
+/pages/ @gbzin-group/frontend
+/.github/ @gbzin-group/devops

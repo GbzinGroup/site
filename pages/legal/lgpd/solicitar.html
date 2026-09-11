@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Dados | LGPD</title>
+  <link rel="stylesheet" href="/assets/css/geral.css">
+  <link rel="stylesheet" href="/assets/css/legal.css">
+</head>
+<body>
+  <main class="legal-page">
+    <h1>Solicitar Meus Dados</h1>
+    <form id="form-lgpd" class="legal-form">
+      <label>Nome completo<input type="text" name="nome" required></label>
+      <label>Email cadastrado<input type="email" name="email" required></label>
+      <label>Tipo de solicitação
+        <select name="tipo" required>
+          <option value="acesso">Acesso aos dados</option>
+          <option value="correcao">Correção</option>
+          <option value="exclusao">Exclusão</option>
+          <option value="portabilidade">Portabilidade</option>
+        </select>
+      </label>
+      <label>Descrição<textarea name="descricao" rows="5" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Enviar solicitação</button>
+      <p id="msg-lgpd"></p>
+    </form>
+  </main>
+  <script src="/assets/js/legal.js" defer></script>
+</body>
+</html>

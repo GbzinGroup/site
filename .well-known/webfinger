@@ -1,0 +1,6 @@
+﻿{
+  "subject": "acct:contato@seusite.com",
+  "links": [
+    { "rel": "http://webfinger.net/rel/profile-page", "href": "https://seusite.com/pages/sobre/" }
+  ]
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Compra - Gbzin Group</title>
+    <meta name="description" content="Finalize sua compra na Gbzin Group" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c5ce7'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>G</text></svg>"
+    />
+    <link rel="stylesheet" href="../../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/compra.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+  </head>
+  <body>
+    <div class="checkout-container">
+      <div class="checkout-header">
+        <div class="icon"><i class="fas fa-lock"></i></div>
+        <h1>Finalizar Compra</h1>
+        <p>Preencha seus dados para concluir o pedido</p>
+      </div>
+      <div class="checkout-grid">
+        <div class="checkout-card">
+          <h2><i class="fas fa-user"></i> Dados Pessoais</h2>
+          <form id="checkoutForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nome Completo *</label
+                ><input
+                  type="text"
+                  id="nome"
+                  required
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label>Email *</label
+                ><input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>WhatsApp *</label
+                ><input
+                  type="tel"
+                  id="whatsapp"
+                  required
+                  placeholder="(15) 99999-9999"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="form-group">
+                <label>CPF *</label
+                ><input
+                  type="text"
+                  id="cpf"
+                  required
+                  placeholder="000.000.000-00"
+                />
+              </div>
+            </div>
+            <h2 style="margin-top: 25px">
+              <i class="fas fa-credit-card"></i> Pagamento
+            </h2>
+            <div class="payment-methods" id="paymentMethods">
+              <div class="payment-method selected" data-method="pix">
+                <i class="fas fa-qrcode"></i><span>PIX</span>
+              </div>
+              <div class="payment-method" data-method="cartao">
+                <i class="fas fa-credit-card"></i><span>Cartão</span>
+              </div>
+              <div class="payment-method" data-method="boleto">
+                <i class="fas fa-barcode"></i><span>Boleto</span>
+              </div>
+            </div>
+            <div id="cartaoFields" style="display: none">
+              <div class="form-group">
+                <label>Número do Cartão</label
+                ><input
+                  type="text"
+                  id="numeroCartao"
+                  placeholder="0000 0000 0000 0000"
+                  maxlength="19"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Validade</label
+                  ><input
+                    type="text"
+                    id="validadeCartao"
+                    placeholder="MM/AA"
+                    maxlength="5"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>CVV</label
+                  ><input
+                    type="text"
+                    id="cvvCartao"
+                    placeholder="123"
+                    maxlength="4"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nome no Cartão</label
+                ><input
+                  type="text"
+                  id="nomeCartao"
+                  placeholder="Como está no cartão"
+                />
+              </div>
+            </div>
+            <h2 style="margin-top: 25px">
+              <i class="fas fa-ticket"></i> Cupom de Desconto
+            </h2>
+            <div class="coupon-box">
+              <input
+                type="text"
+                id="cupomInput"
+                placeholder="DIGITE SEU CUPOM"
+              /><button type="button" onclick="aplicarCupom()">Aplicar</button>
+            </div>
+            <div
+              class="coupon-applied"
+              id="cupomAplicado"
+              style="display: none"
+            >
+              <span id="cupomTexto"></span
+              ><button type="button" onclick="removerCupom()">Remover</button>
+            </div>
+            <button type="submit" class="btn-submit" id="btnSubmit">
+              <i class="fas fa-check-circle"></i><span>Confirmar Pedido</span>
+            </button>
+          </form>
+        </div>
+        <div class="order-summary">
+          <h2><i class="fas fa-shopping-cart"></i> Resumo</h2>
+          <div id="produtoInfo">
+            <div class="summary-row">
+              <span>Produto</span><span id="produtoNome">Carregando...</span>
+            </div>
+            <div class="summary-row">
+              <span>Valor</span><span id="produtoPreco">R$ 0,00</span>
+            </div>
+          </div>
+          <div class="summary-row" id="descontoRow" style="display: none">
+            <span>Desconto</span
+            ><span id="descontoValor" style="color: #00b894">- R$ 0,00</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span><span id="totalFinal">R$ 0,00</span>
+          </div>
+          <div class="secure-badge">
+            <i class="fas fa-shield-alt"></i><span>Compra 100% segura</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="../../assets/js/compra.js"></script>
+
+    <script src="/assets/js/anti-adblock.js"></script>
+    <script>
+    if (window.AdBlockGuard) {
+        AdBlockGuard.configure({
+        copy: {
+            title: "Precisamos do seu apoio",
+            body: "Detectamos um bloqueador de anúncios ativo. Os anúncios mantêm o Gbzin Group no ar e gratuitos para todos.",
+            primary: "Já desativei, recarregar",
+            secondary: "Como desativar?"
+        }
+        });
+        AdBlockGuard.start();
+    }
+    </script>
+
+  </body>
+</html>

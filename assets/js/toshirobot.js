@@ -1,0 +1,1 @@
+export function initToshiroBot(){document.querySelector(".btn-add-bot")?.addEventListener("click",()=>{window.open("https://discord.com/oauth2/authorize","_blank")})}

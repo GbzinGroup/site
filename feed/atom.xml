@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gbzin Group - Blog</title>
+  <link href="https://gbzin.com.br/"/>
+  <link href="https://gbzin.com.br/feed/atom.xml" rel="self"/>
+  <updated>2026-01-01T00:00:00Z</updated>
+  <id>https://gbzin.com.br/</id>
+  <author><name>Gbzin Group</name></author>
+  <entry>
+    <title>Bem-vindo ao Blog Gbzin Group</title>
+    <link href="https://gbzin.com.br/pages/conteudo/blog/"/>
+    <id>https://gbzin.com.br/pages/conteudo/blog/</id>
+    <updated>2026-01-01T00:00:00Z</updated>
+    <summary>Nosso blog esta no ar.</summary>
+  </entry>
+</feed>

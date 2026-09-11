@@ -1,0 +1,9 @@
+﻿Do Not Track Policy
+===================
+
+This site honors the DNT header. When DNT: 1 is sent, we do not:
+- Track you across sites
+- Build behavioral profiles
+- Share data with third parties
+
+Contact: privacy@seusite.com

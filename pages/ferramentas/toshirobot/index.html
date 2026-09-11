@@ -1,0 +1,715 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Toshiro Bot - Gbzin Group</title>
+    <meta
+      name="description"
+      content="Toshiro Bot - Bot Discord completo com moderaÃ§Ã£o, economia, automaÃ§Ã£o e sistemas personalizados para sua comunidade."
+    />
+    <meta
+      name="keywords"
+      content="toshiro bot, bot discord, moderaÃ§Ã£o, economia, automaÃ§Ã£o, gbzin group, discord bot"
+    />
+    <meta name="author" content="Gbzin Group" />
+    <meta property="og:title" content="Toshiro Bot - Gbzin Group" />
+    <meta
+      property="og:description"
+      content="Bot Discord completo com moderaÃ§Ã£o, economia, automaÃ§Ã£o e sistemas personalizados."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c5ce7'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>G</text></svg>"
+    />
+    <link rel="stylesheet" href="../../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/mobile.css"
+      media="screen and (max-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/toshirobot.css" />
+  </head>
+  <body>
+    <nav class="navbar scrolled" id="navbar">
+      <div class="navbar-container">
+        <a href="/index.html" class="navbar-logo"
+          ><span class="logo-icon">G</span
+          ><span class="logo-text"
+            ><span class="logo-name">Gbzin Group</span
+            ><span class="logo-tagline">Tecnologia Digital</span></span
+          ></a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span class="hamburger-line"></span
+          ><span class="hamburger-line"></span
+          ><span class="hamburger-line"></span>
+        </button>
+        <div class="navbar-links" id="navbarLinks">
+          <div class="nav-item">
+            <a href="/index.html" class="nav-link"
+              ><i class="fas fa-home"></i><span>InÃ­cio</span></a
+            >
+          </div>
+          <div class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle">
+              <i class="fas fa-cog"></i><span>ServiÃ§os</span
+              ><i class="fas fa-chevron-down dropdown-arrow"></i>
+            </button>
+            <div class="nav-dropdown">
+              <a href="/pages/servicos/index.html" class="nav-link"
+                ><i class="fas fa-th-large"></i
+                ><span>Todos os ServiÃ§os</span></a
+              ><a href="/pages/servicos/web/index.html" class="nav-link"
+                ><i class="fas fa-code"></i><span>Desenvolvimento Web</span></a
+              ><a href="/pages/servicos/apps/index.html" class="nav-link"
+                ><i class="fas fa-mobile-alt"></i><span>Aplicativos</span></a
+              ><a href="/pages/servicos/discord/index.html" class="nav-link"
+                ><i class="fab fa-discord"></i><span>Discord</span></a
+              ><a href="/pages/servicos/bots/index.html" class="nav-link"
+                ><i class="fas fa-robot"></i><span>Bots Personalizados</span></a
+              ><a href="/pages/servicos/hospedagem/index.html" class="nav-link"
+                ><i class="fas fa-server"></i><span>Hospedagem</span></a
+              ><a href="/pages/store/index.html" class="nav-link"
+                ><i class="fas fa-shopping-cart"></i><span>Vendas</span></a
+              >
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/pages/store/index.html" class="nav-link"
+              ><i class="fas fa-shopping-cart"></i><span>Loja</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/discord/index.html" class="nav-link"
+              ><i class="fab fa-discord"></i><span>Discord</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/toshirobot/index.html" class="nav-link active"
+              ><i class="fas fa-robot"></i><span>Toshiro Bot</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/ferramentas/app/index.html" class="nav-link"
+              ><i class="fas fa-mobile-alt"></i><span>App</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/conteudo/wiki/index.html" class="nav-link"
+              ><i class="fas fa-book"></i><span>Wiki</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/institucional/sobre/index.html" class="nav-link"
+              ><i class="fas fa-users"></i><span>Sobre</span></a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="/pages/suporte/contato/index.html" class="nav-link"
+              ><i class="fas fa-envelope"></i><span>Contato</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="bot-hero">
+      <div class="container">
+        <i class="fas fa-robot bot-hero-icon"></i>
+        <div class="section-badge">DISCORD BOT</div>
+        <h1>Toshiro Bot</h1>
+        <p>
+          O bot completo para sua comunidade Discord. ModeraÃ§Ã£o, economia,
+          automaÃ§Ã£o e sistemas personalizados â€” tudo em um Ãºnico bot.
+        </p>
+        <div class="bot-hero-buttons">
+          <a
+            href="https://discord.gg/UBjxyrwVKj"
+            target="_blank"
+            class="btn-primary-bot"
+            ><i class="fab fa-discord"></i> Adicionar ao Discord</a
+          ><a href="#comandos" class="btn-outline-bot"
+            ><i class="fas fa-terminal"></i> Ver Comandos</a
+          >
+        </div>
+        <div class="bot-stats">
+          <div class="bot-stat">
+            <div class="num">50+</div>
+            <div class="label">Comandos</div>
+          </div>
+          <div class="bot-stat">
+            <div class="num">100+</div>
+            <div class="label">Servidores</div>
+          </div>
+          <div class="bot-stat">
+            <div class="num">10k+</div>
+            <div class="label">UsuÃ¡rios</div>
+          </div>
+          <div class="bot-stat">
+            <div class="num">99.9%</div>
+            <div class="label">Uptime</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Recursos</span>
+          <h2 class="section-title">
+            Funcionalidades <span class="gradient-text">completas</span>
+          </h2>
+          <p class="section-description">
+            Tudo o que sua comunidade precisa em um Ãºnico bot
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>ModeraÃ§Ã£o AvanÃ§ada</h3>
+            <p>
+              Ban, kick, mute, warn, sistema de logs, filtro de palavras e
+              proteÃ§Ã£o anti-raid para manter seu servidor seguro.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-coins"></i></div>
+            <h3>Sistema de Economia</h3>
+            <p>
+              Moeda virtual, daily, trabalhos, apostas, loja de itens e ranking
+              global para engajar seus membros.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <h3>AutomaÃ§Ã£o</h3>
+            <p>
+              Auto-roles, mensagens automÃ¡ticas, reaÃ§Ãµes, tickets de suporte e
+              sistemas de boas-vindas personalizados.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-music"></i></div>
+            <h3>MÃºsica</h3>
+            <p>
+              Reproduza mÃºsicas do YouTube e Spotify em canais de voz com fila,
+              loop e controles completos.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-gamepad"></i></div>
+            <h3>DiversÃ£o e Games</h3>
+            <p>
+              Comandos de diversÃ£o, minigames, memes, dados e interaÃ§Ãµes para
+              animar a comunidade.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-cog"></i></div>
+            <h3>Sistemas Personalizados</h3>
+            <p>
+              Configure cada aspecto do bot: prefixo, canais, cargos, permissÃµes
+              e mÃ³dulos ativos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="commands-section" id="comandos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Comandos</span>
+          <h2 class="section-title">
+            Principais <span class="gradient-text">comandos</span>
+          </h2>
+          <p class="section-description">
+            Organizados por categoria para facilitar o uso
+          </p>
+        </div>
+        <div class="commands-category">
+          <h3><i class="fas fa-info-circle"></i> InformaÃ§Ãµes</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-question"></i></div>
+              <div class="command-info">
+                <div class="command-name">/help</div>
+                <div class="command-desc">
+                  Mostra a lista completa de comandos disponÃ­veis.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-chart-bar"></i></div>
+              <div class="command-info">
+                <div class="command-name">/botinfo</div>
+                <div class="command-desc">
+                  Exibe informaÃ§Ãµes sobre o bot e estatÃ­sticas.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-server"></i></div>
+              <div class="command-info">
+                <div class="command-name">/serverinfo</div>
+                <div class="command-desc">
+                  Mostra informaÃ§Ãµes detalhadas do servidor.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-user"></i></div>
+              <div class="command-info">
+                <div class="command-name">/userinfo</div>
+                <div class="command-desc">
+                  Exibe informaÃ§Ãµes sobre um usuÃ¡rio.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="commands-category">
+          <h3><i class="fas fa-shield-alt"></i> ModeraÃ§Ã£o</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-hammer"></i></div>
+              <div class="command-info">
+                <div class="command-name">/ban</div>
+                <div class="command-desc">
+                  Bane um usuÃ¡rio do servidor permanentemente.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-user-slash"></i></div>
+              <div class="command-info">
+                <div class="command-name">/kick</div>
+                <div class="command-desc">Expulsa um usuÃ¡rio do servidor.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon">
+                <i class="fas fa-microphone-slash"></i>
+              </div>
+              <div class="command-info">
+                <div class="command-name">/mute</div>
+                <div class="command-desc">
+                  Silencia um usuÃ¡rio temporariamente.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <div class="command-info">
+                <div class="command-name">/warn</div>
+                <div class="command-desc">
+                  Aplica uma advertÃªncia a um usuÃ¡rio.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-broom"></i></div>
+              <div class="command-info">
+                <div class="command-name">/clear</div>
+                <div class="command-desc">Limpa mensagens de um canal.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-lock"></i></div>
+              <div class="command-info">
+                <div class="command-name">/lock</div>
+                <div class="command-desc">
+                  Bloqueia um canal para envio de mensagens.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="commands-category">
+          <h3><i class="fas fa-coins"></i> Economia</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-wallet"></i></div>
+              <div class="command-info">
+                <div class="command-name">/balance</div>
+                <div class="command-desc">
+                  Mostra seu saldo atual de moedas.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-gift"></i></div>
+              <div class="command-info">
+                <div class="command-name">/daily</div>
+                <div class="command-desc">Resgata sua recompensa diÃ¡ria.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-briefcase"></i></div>
+              <div class="command-info">
+                <div class="command-name">/work</div>
+                <div class="command-desc">Trabalhe para ganhar moedas.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-trophy"></i></div>
+              <div class="command-info">
+                <div class="command-name">/ranking</div>
+                <div class="command-desc">
+                  Veja o ranking dos usuÃ¡rios mais ricos.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-store"></i></div>
+              <div class="command-info">
+                <div class="command-name">/shop</div>
+                <div class="command-desc">
+                  Acesse a loja de itens do servidor.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-dice"></i></div>
+              <div class="command-info">
+                <div class="command-name">/bet</div>
+                <div class="command-desc">Aposte suas moedas em um jogo.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="commands-category">
+          <h3><i class="fas fa-music"></i> MÃºsica</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-play"></i></div>
+              <div class="command-info">
+                <div class="command-name">/play</div>
+                <div class="command-desc">
+                  Reproduz uma mÃºsica pelo nome ou link.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-pause"></i></div>
+              <div class="command-info">
+                <div class="command-name">/pause</div>
+                <div class="command-desc">Pausa a mÃºsica atual.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-forward"></i></div>
+              <div class="command-info">
+                <div class="command-name">/skip</div>
+                <div class="command-desc">
+                  Pula para a prÃ³xima mÃºsica da fila.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-list"></i></div>
+              <div class="command-info">
+                <div class="command-name">/queue</div>
+                <div class="command-desc">Mostra a fila de mÃºsicas atual.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="commands-category">
+          <h3><i class="fas fa-gamepad"></i> DiversÃ£o</h3>
+          <div class="commands-grid">
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-dice"></i></div>
+              <div class="command-info">
+                <div class="command-name">/roll</div>
+                <div class="command-desc">Rola um dado de 1 a 100.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-smile"></i></div>
+              <div class="command-info">
+                <div class="command-name">/meme</div>
+                <div class="command-desc">Envia um meme aleatÃ³rio.</div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-heart"></i></div>
+              <div class="command-info">
+                <div class="command-name">/ship</div>
+                <div class="command-desc">
+                  Calcula a compatibilidade entre dois usuÃ¡rios.
+                </div>
+              </div>
+            </div>
+            <div class="command-card">
+              <div class="command-icon"><i class="fas fa-comments"></i></div>
+              <div class="command-info">
+                <div class="command-name">/8ball</div>
+                <div class="command-desc">FaÃ§a uma pergunta Ã  bola mÃ¡gica.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bot-preview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Preview</span>
+          <h2 class="section-title">
+            Veja o <span class="gradient-text">Toshiro Bot</span> em aÃ§Ã£o
+          </h2>
+          <p class="section-description">
+            Uma prÃ©via de como o bot funciona no Discord
+          </p>
+        </div>
+        <div class="discord-mockup">
+          <div class="discord-header">
+            <div class="discord-avatar">T</div>
+            <div>
+              <span class="discord-name">Toshiro Bot</span
+              ><span class="discord-bot-tag">BOT</span>
+            </div>
+          </div>
+          <div class="discord-body">
+            <div class="discord-message">
+              <div class="discord-msg-avatar">U</div>
+              <div class="discord-msg-content">
+                <div class="discord-msg-header">
+                  <span class="discord-msg-name" style="color: #a855f7"
+                    >UsuÃ¡rio</span
+                  ><span class="discord-msg-time">hoje Ã s 15:23</span>
+                </div>
+                <div class="discord-msg-text">
+                  <span class="discord-command">/help</span>
+                </div>
+              </div>
+            </div>
+            <div class="discord-message">
+              <div class="discord-msg-avatar">T</div>
+              <div class="discord-msg-content">
+                <div class="discord-msg-header">
+                  <span class="discord-msg-name" style="color: #6c5ce7"
+                    >Toshiro Bot</span
+                  ><span class="discord-msg-time">hoje Ã s 15:23</span>
+                </div>
+                <div class="discord-embed">
+                  <div class="discord-embed-title">
+                    ðŸ¤– Toshiro Bot - Lista de Comandos
+                  </div>
+                  <div class="discord-embed-desc">
+                    **ModeraÃ§Ã£o** Â· ban, kick, mute, warn<br />**Economia** Â·
+                    daily, work, balance<br />**MÃºsica** Â· play, skip, queue<br />**DiversÃ£o**
+                    Â· roll, meme, ship
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">
+            Perguntas <span class="gradient-text">frequentes</span>
+          </h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item active">
+            <div class="faq-question">
+              <span>Como adiciono o Toshiro Bot no meu servidor?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Clique no botÃ£o "Adicionar ao Discord" no topo da pÃ¡gina. VocÃª
+                serÃ¡ redirecionado para a pÃ¡gina de autorizaÃ§Ã£o do bot, onde
+                poderÃ¡ escolher em qual servidor adicionÃ¡-lo.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>O Toshiro Bot Ã© gratuito?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! O Toshiro Bot Ã© completamente gratuito para todos os
+                servidores. Oferecemos recursos premium opcionais para quem
+                deseja funcionalidades extras.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Posso personalizar os comandos do bot?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim! VocÃª pode configurar prefixo, canais especÃ­ficos, cargos e
+                permissÃµes. AlÃ©m disso, vÃ¡rios mÃ³dulos podem ser ativados ou
+                desativados conforme sua preferÃªncia.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>O bot tem suporte para mÃºltiplos idiomas?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Atualmente o bot suporta portuguÃªs e inglÃªs, com previsÃ£o de
+                adicionar mais idiomas no futuro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Como entro em contato para suporte?</span
+              ><i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                VocÃª pode entrar no nosso servidor do Discord atravÃ©s do link
+                disponÃ­vel na pÃ¡gina para obter suporte direto da equipe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section cta-section">
+      <div class="container">
+        <div
+          style="
+            text-align: center;
+            padding: 48px 32px;
+            background: linear-gradient(
+              135deg,
+              rgba(108, 92, 231, 0.1),
+              rgba(168, 85, 247, 0.05)
+            );
+            border: 1px solid rgba(108, 92, 231, 0.25);
+            border-radius: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+          "
+        >
+          <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 12px">
+            Pronto para turbinar seu servidor?
+          </h2>
+          <p
+            style="
+              color: var(--text-muted);
+              margin-bottom: 24px;
+              line-height: 1.7;
+            "
+          >
+            Adicione o Toshiro Bot agora e transforme sua comunidade com
+            moderaÃ§Ã£o, economia e diversÃ£o.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 12px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a
+              href="https://discord.gg/UBjxyrwVKj"
+              target="_blank"
+              class="btn-primary-bot"
+              ><i class="fab fa-discord"></i> Adicionar ao Discord</a
+            ><a href="/pages/suporte/contato/index.html" class="btn-outline-bot"
+              ><i class="fas fa-envelope"></i> Falar Conosco</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-name">Gbzin Group</span>
+            <p>
+              Tecnologia, desenvolvimento e soluÃ§Ãµes digitais personalizadas.
+            </p>
+            <div class="footer-social">
+              <a href="https://github.com/GbzinGroup" aria-label="GitHub"
+                ><i class="fab fa-github"></i></a
+              ><a href="https://discord.gg/UBjxyrwVKj" aria-label="Discord"
+                ><i class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>NavegaÃ§Ã£o</h3>
+            <a href="/index.html">InÃ­cio</a
+            ><a href="/pages/servicos/index.html">ServiÃ§os</a
+            ><a href="/pages/ferramentas/discord/index.html">Discord</a
+            ><a href="/pages/ferramentas/toshirobot/index.html">Toshiro Bot</a
+            ><a href="/pages/ferramentas/app/index.html">App</a
+            ><a href="/pages/conteudo/wiki/index.html">Wiki</a
+            ><a href="/pages/suporte/contato/index.html">Contato</a>
+          </div>
+          <div class="footer-column">
+            <h3>ServiÃ§os</h3>
+            <a href="/pages/servicos/web/index.html">Web</a
+            ><a href="/pages/servicos/apps/index.html">Aplicativos</a
+            ><a href="/pages/servicos/discord/index.html">Discord</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Gbzin Group. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="../../assets/js/index.js"></script>
+    <script>
+      document.querySelectorAll(".faq-item").forEach((e) => {
+        e.querySelector(".faq-question").addEventListener("click", () => {
+          const t = e.classList.contains("active");
+          (document
+            .querySelectorAll(".faq-item")
+            .forEach((e) => e.classList.remove("active")),
+            t || e.classList.add("active"));
+        });
+      });
+    </script>
+
+    <!-- ðŸ›¡ï¸ Anti-AdBlock -->
+<script src="/assets/js/anti-adblock.js"></script>
+<script>
+  if (window.AdBlockGuard) {
+    AdBlockGuard.configure({
+      copy: {
+        title: "Precisamos do seu apoio",
+        body: "Detectamos um bloqueador de anÃºncios ativo. Os anÃºncios mantÃªm o Gbzin Group no ar e gratuitos para todos.",
+        primary: "JÃ¡ desativei, recarregar",
+        secondary: "Como desativar?"
+      }
+    });
+    AdBlockGuard.start();
+  }
+</script>
+
+  </body>
+</html>

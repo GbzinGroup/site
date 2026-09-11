@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin do Blog | Gbzin Group</title>
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/geral.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+
+  <main class="blog-admin">
+
+    <!-- Login -->
+    <section class="admin-login" id="login-box">
+      <h1><i class="fas fa-lock"></i> Painel Admin</h1>
+      <p>Acesso restrito</p>
+      <form id="form-login">
+        <label>Usuário
+          <input type="text" id="usuario" placeholder="admin" required>
+        </label>
+        <label>Senha
+          <input type="password" id="senha" placeholder="••••••••" required>
+        </label>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <p id="login-msg"></p>
+      </form>
+    </section>
+
+    <!-- Painel -->
+    <section class="admin-panel" id="admin-box" hidden>
+      <header class="admin-header">
+        <h1><i class="fas fa-newspaper"></i> Gerenciar Posts</h1>
+        <button id="btn-logout" class="btn btn-secondary">
+          <i class="fas fa-sign-out-alt"></i> Sair
+        </button>
+      </header>
+
+      <div class="admin-actions">
+        <button id="btn-novo" class="btn btn-primary">
+          <i class="fas fa-plus"></i> Novo Post
+        </button>
+        <button id="btn-recarregar" class="btn btn-secondary">
+          <i class="fas fa-sync"></i> Recarregar
+        </button>
+      </div>
+
+      <!-- Formulário -->
+      <form id="form-post" class="admin-form" hidden>
+        <input type="hidden" id="post-id">
+
+        <label>Título
+          <input type="text" id="post-titulo" required maxlength="120">
+        </label>
+
+        <label>Slug (URL)
+          <input type="text" id="post-slug" required pattern="[a-z0-9-]+" placeholder="meu-post">
+        </label>
+
+        <label>Resumo (aparece na lista)
+          <textarea id="post-resumo" rows="2" maxlength="200" required></textarea>
+        </label>
+
+        <label>Conteúdo (aceita Markdown básico)
+          <textarea id="post-conteudo" rows="12" required></textarea>
+        </label>
+
+        <div class="admin-row">
+          <label>Categoria
+            <select id="post-categoria" required>
+              <option value="tutorial">Tutorial</option>
+              <option value="noticia">Notícia</option>
+              <option value="dica">Dica</option>
+              <option value="produto">Produto</option>
+            </select>
+          </label>
+
+          <label>Autor
+            <input type="text" id="post-autor" value="Gbzin Group" required>
+          </label>
+        </div>
+
+        <label>Tags (separadas por vírgula)
+          <input type="text" id="post-tags" placeholder="hospedagem, dicas, node">
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" id="post-destaque"> Marcar como destaque
+        </label>
+
+        <div class="admin-form-actions">
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-save"></i> Salvar
+          </button>
+          <button type="button" id="btn-cancelar" class="btn btn-secondary">
+            Cancelar
+          </button>
+        </div>
+        <p id="form-msg"></p>
+      </form>
+
+      <!-- Lista -->
+      <div class="admin-lista" id="lista-posts"></div>
+    </section>
+
+  </main>
+
+  <script src="assets/js/blog-admin.js" defer></script>
+</body>
+</html>

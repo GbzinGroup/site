@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Renda Extra em Dólar - Acesso Imediato</title>
+    <meta
+      name="description"
+      content="Comece a ganhar em dólar hoje mesmo. Acesso imediato e resultados rápidos."
+    />
+    <meta name="theme-color" content="#6c5ce7" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236c5ce7'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>G</text></svg>"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background: #0a0a0f;
+        color: #e1e1e6;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+        overflow: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(108, 92, 231, 0.25) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(162, 155, 254, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(72, 52, 212, 0.15) 0%,
+            transparent 60%
+          );
+        pointer-events: none;
+        animation: bg-pulse 5s ease-in-out infinite;
+      }
+      @keyframes bg-pulse {
+        0%,
+        100% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .landing {
+        max-width: 550px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .icone {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 25px;
+        background: linear-gradient(
+          135deg,
+          rgba(108, 92, 231, 0.2),
+          rgba(162, 155, 254, 0.2)
+        );
+        border: 2px solid rgba(108, 92, 231, 0.4);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: flutuar 3s ease-in-out infinite;
+        box-shadow: 0 0 50px rgba(108, 92, 231, 0.3);
+      }
+      @keyframes flutuar {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+      .icone i {
+        font-size: 2.5rem;
+        color: #a29bfe;
+      }
+      .selo {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        background: rgba(0, 184, 148, 0.1);
+        border: 1px solid rgba(0, 184, 148, 0.3);
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #00b894;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+      .selo i {
+        animation: check-pulse 2s ease-in-out infinite;
+      }
+      @keyframes check-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.3);
+        }
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        font-weight: 900;
+        line-height: 1.15;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+      }
+      .destaque {
+        background: linear-gradient(135deg, #6c5ce7, #a29bfe, #6c5ce7);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 2s ease-in-out infinite;
+      }
+      @keyframes shimmer {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+      .sub {
+        font-size: 1.05rem;
+        color: #a0a0b8;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 18px 40px;
+        background: linear-gradient(135deg, #6c5ce7, #5a4bd1);
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.05rem;
+        font-weight: 800;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 30px rgba(108, 92, 231, 0.5);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .btn::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.25);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.5s,
+          height 0.5s;
+      }
+      .btn:active::after {
+        width: 400px;
+        height: 400px;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 45px rgba(108, 92, 231, 0.7);
+      }
+      .btn i {
+        font-size: 1.2rem;
+        animation: mover 1.5s ease-in-out infinite;
+      }
+      @keyframes mover {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(6px);
+        }
+      }
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        margin-top: 35px;
+        flex-wrap: wrap;
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat-num {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: #a29bfe;
+        display: block;
+      }
+      .stat-label {
+        font-size: 0.75rem;
+        color: #6b6b80;
+      }
+      .beneficios {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 25px;
+      }
+      .beneficio {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: rgba(108, 92, 231, 0.08);
+        border: 1px solid #2a2a3e;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        color: #a0a0b8;
+        transition: all 0.3s ease;
+      }
+      .beneficio:hover {
+        border-color: #6c5ce7;
+        background: rgba(108, 92, 231, 0.15);
+        transform: translateY(-2px);
+      }
+      .beneficio i {
+        color: #a29bfe;
+        font-size: 0.85rem;
+      }
+      .urgencia {
+        margin-top: 30px;
+        font-size: 0.85rem;
+        color: #fdcb6e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .urgencia i {
+        animation: clock-shake 2s ease-in-out infinite;
+      }
+      @keyframes clock-shake {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        25% {
+          transform: rotate(-5deg);
+        }
+        75% {
+          transform: rotate(5deg);
+        }
+      }
+      @media (max-width: 480px) {
+        .btn {
+          width: 100%;
+          padding: 16px 25px;
+          font-size: 0.9rem;
+        }
+        .stats {
+          gap: 20px;
+        }
+        .icone {
+          width: 70px;
+          height: 70px;
+        }
+        .icone i {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landing">
+      <div class="icone"><i class="fas fa-dollar-sign"></i></div>
+      <div class="selo">
+        <i class="fas fa-check-circle"></i>Plataforma Verificada
+      </div>
+      <h1>Ganhe em <span class="destaque">Dólar</span><br />Todos os Dias</h1>
+      <p class="sub">
+        Acesso imediato a uma plataforma que já pagou mais de R$ 500 mil para
+        seus usuários. Comece agora mesmo.
+      </p>
+      <a
+        href="https://monetiza.link/ref/115446376897485563340"
+        class="btn"
+        target="_blank"
+        ><i class="fas fa-rocket"></i>Começar Agora</a
+      >
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-num">+10.000</span
+          ><span class="stat-label">Usuários</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">R$ 500K+</span
+          ><span class="stat-label">Já Pagos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">25%</span
+          ><span class="stat-label">Comissão</span>
+        </div>
+      </div>
+      <div class="beneficios">
+        <div class="beneficio"><i class="fas fa-bolt"></i>Imediato</div>
+        <div class="beneficio"><i class="fas fa-lock"></i>Seguro</div>
+        <div class="beneficio"><i class="fas fa-infinity"></i>Passivo</div>
+      </div>
+      <div class="urgencia">
+        <i class="fas fa-clock"></i>Vagas limitadas esta semana
+      </div>
+    </div>
+
+    <script src="/assets/js/anti-adblock.js"></script>
+    <script>
+    if (window.AdBlockGuard) {
+        AdBlockGuard.configure({
+        copy: {
+            title: "Precisamos do seu apoio",
+            body: "Detectamos um bloqueador de anúncios ativo. Os anúncios mantêm o Gbzin Group no ar e gratuitos para todos.",
+            primary: "Já desativei, recarregar",
+            secondary: "Como desativar?"
+        }
+        });
+        AdBlockGuard.start();
+    }
+    </script>
+
+  </body>
+</html>
