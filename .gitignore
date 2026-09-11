@@ -1,71 +1,46 @@
 ﻿# Dependencias
 node_modules/
 vendor/
-.pnp/
-.pnp.js
 
 # Ambiente
 .env
 .env.*
-!.env.example
 config.local.js
 secrets.json
 
 # Logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-logs/
-*.loglevel
 
 # Sistema
 .DS_Store
-.DS_Store?
-._*
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+desktop.ini
 
-# Editores
+# VS Code
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
-!.vscode/launch.json
-.idea/
-*.sublime-*
 
 # Build
 dist/
 build/
 .next/
 out/
-.cache/
-.parcel-cache/
 
 # Backups
 *.bak
-*.old
-*.orig
 *.zip
 backup-*
 
-# Chaves e certificados
+# Chaves
 *.pem
 *.key
-*.crt
-*.p12
-*.pfx
 id_rsa*
-id_ed25519*
 
-# Testes
-coverage/
-.nyc_output/
+# Node
+package-lock.json
 
-# Cloudflare / Netlify / Vercel
-.netlify/
-.vercel/
-.wrangler/
+# Cache
+.cache/
+.parcel-cache/
